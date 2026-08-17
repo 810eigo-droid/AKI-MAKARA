@@ -63,18 +63,19 @@ body.is-sample .demo-badge{display:block}
 .watermark{
   position:fixed; inset:0; z-index:190;
   pointer-events:none;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27 width%3D%27320%27 height%3D%27260%27%3E%3Ctext x%3D%27160%27 y%3D%27140%27 font-family%3D%27Helvetica%2CArial%2Csans-serif%27 font-size%3D%2738%27 font-weight%3D%27700%27 letter-spacing%3D%277%27 text-anchor%3D%27middle%27 transform%3D%27rotate(-28 160 130)%27 stroke%3D%27%23ffffff%27 stroke-width%3D%274%27 stroke-opacity%3D%270.55%27 fill%3D%27%233a3a3a%27 paint-order%3D%27stroke%27%3ESAMPLE%3C%2Ftext%3E%3C%2Fsvg%3E");
+  background-image:url("data:image/svg+xml,%3Csvg xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27 width%3D%27360%27 height%3D%27280%27%3E%3Ctext x%3D%27110%27 y%3D%2780%27 font-family%3D%27Helvetica%2CArial%2Csans-serif%27 font-size%3D%2727%27 font-weight%3D%27700%27 letter-spacing%3D%275%27 text-anchor%3D%27middle%27 transform%3D%27rotate(-28 110 80)%27 stroke%3D%27%23ffffff%27 stroke-width%3D%273%27 stroke-opacity%3D%270.5%27 fill%3D%27%232f2f2f%27 paint-order%3D%27stroke%27%3ESAMPLE%3C%2Ftext%3E%3Ctext x%3D%27250%27 y%3D%27205%27 font-family%3D%27Helvetica%2CArial%2Csans-serif%27 font-size%3D%2723%27 font-weight%3D%27700%27 letter-spacing%3D%273%27 text-anchor%3D%27middle%27 transform%3D%27rotate(-28 250 205)%27 stroke%3D%27%23ffffff%27 stroke-width%3D%273%27 stroke-opacity%3D%270.5%27 fill%3D%27%232f2f2f%27 paint-order%3D%27stroke%27%3ETAFdesign%3C%2Ftext%3E%3C%2Fsvg%3E");
   background-repeat:repeat;
-  background-size:280px 228px;
-  /* 中間グレー＋白フチ。白いカード上でも紫背景上でも同じように読める。
-     mix-blend-mode は position:fixed と併用するとChromiumで描画が崩れるため使わない */
-  opacity:.34;
+  background-size:300px 233px;
+  /* 濃いグレー＋白フチ。白カード上でも濃紫背景上でも同じように見える。
+     mix-blend-mode は position:fixed と併用するとChromiumで描画が崩れるため使わない。
+     ▼濃さの調整はこの opacity の数値だけを触ってください（0.10=極薄 / 0.30=はっきり） */
+  opacity:.17;
 }
 @media (max-width:600px){
-  .watermark{background-size:200px 163px;opacity:.3}
+  .watermark{background-size:230px 179px;opacity:.15}
 }
 @media print{
-  .watermark{opacity:.45}
+  .watermark{opacity:.3}
 }
 
 /* ---------- DEMO badge ---------- */
@@ -161,14 +162,30 @@ section{position:relative}
    FV
    ============================================================ */
 .fv{
-  background:
-    radial-gradient(1200px 700px at 78% -8%,rgba(227,155,194,.55),transparent 60%),
-    radial-gradient(900px 620px at 10% 18%,rgba(139,107,199,.5),transparent 62%),
-    radial-gradient(800px 800px at 50% 112%,rgba(247,220,235,.8),transparent 56%),
-    linear-gradient(175deg,#190F32 0%,#241748 34%,#3B2668 58%,#6A4A93 82%,#BE93BE 100%);
-  padding:60px 0 44px;
+  position:relative;
+  /* 画像が読み込まれるまでの下地。画像の上端〜下端の色に合わせてある */
+  background:linear-gradient(175deg,#190F32 0%,#241748 34%,#3B2668 58%,#6A4A93 82%,#BE93BE 100%);
+  padding:0 0 44px;
   overflow:hidden;
   isolation:isolate;
+}
+/* PCなど画像より画面が広いとき、左右の余白を画像自身のぼかしで埋める。
+   引き伸ばさないので画質が落ちず、余白も違和感なく繋がる */
+.fv::before{
+  content:"";position:absolute;inset:0;z-index:-1;
+  background:url("images/fv.webp") center top/cover no-repeat;
+  filter:blur(48px) saturate(1.15);
+  transform:scale(1.2);
+  opacity:.9;
+}
+/* FV画像そのもの。スマホ幅では全幅、PCでは520pxで中央固定 */
+.fv-img{display:block;position:relative;width:100%;max-width:520px;margin:0 auto}
+.fv-img img{width:100%;height:auto;display:block}
+
+/* 画面には出さず、検索エンジンと読み上げにだけ渡すテキスト */
+.sr-only{
+  position:absolute;width:1px;height:1px;padding:0;margin:-1px;
+  overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;
 }
 .stars{position:absolute;inset:0;z-index:-1;opacity:.85}
 .stars::before,.stars::after{
@@ -228,7 +245,7 @@ section{position:relative}
   color:var(--text);
   border-radius:var(--radius);
   padding:24px 20px 22px;
-  margin:0 auto 24px;
+  margin:18px auto 24px;
   max-width:520px;
   box-shadow:0 26px 60px -24px rgba(30,12,60,.75);
   border:1px solid rgba(255,255,255,.8);
@@ -596,12 +613,8 @@ footer .cr{font-family:var(--script);font-style:italic;letter-spacing:.1em;margi
    ============================================================ */
 @media (min-width:820px){
   body{font-size:16.5px}
-  /* PCでもCTAがファーストビュー内に収まるよう圧縮 */
-  .fv{padding:56px 0 56px}
-  .fv-lead{margin-bottom:18px}
-  .fv-h1{font-size:clamp(38px,4.2vw,50px)}
-  .fv-sub{max-width:36em;margin:16px auto 24px}
-  .offer{max-width:600px;padding:22px 30px 20px}
+  .fv{padding:0 0 56px}
+  .offer{max-width:520px;padding:22px 30px 20px}
   .offer-list li{font-size:14px;padding:7px 4px}
   .scroll-cue{margin-top:20px}
   .scroll-cue span{height:26px}
@@ -633,25 +646,18 @@ footer .cr{font-family:var(--script);font-style:italic;letter-spacing:.1em;margi
 <div class="demo-badge">SAMPLE — 改善提案 / Teach &amp; Funnel Design　※無断使用禁止</div>
 
 <!-- ==================== FV ==================== -->
+<!-- FV画像を差し替えるときは images/fv.webp を上書きするだけ。
+     画像内の文字は検索エンジンに読まれないため、同じ内容を下の h1 に持たせている（画面上は非表示） -->
 <section class="fv">
-  <div class="stars" aria-hidden="true"></div>
+  <h1 class="sr-only">星々が教えてくれる、あなたの魂の設計図 — 才能・使命・飛躍のタイミングを読み解く「しあわせ超開運メソッド」無料動画セミナー（参加費0円）</h1>
+
+  <a class="fv-img" href="#entry" aria-label="LINEで無料セミナーを受け取る">
+    <img src="images/fv.webp" alt="" width="1170" height="2532" fetchpriority="high" decoding="async">
+  </a>
+
   <div class="wrap fv-inner">
 
-    <p class="fv-lead">頑張っているのに、報われないあなたへ</p>
-
-    <h1 class="fv-h1">
-      星々が教えてくれる<br>
-      <span class="gd">あなたの魂の設計図</span>
-      <span class="sm">才能・使命・飛躍のタイミングを読み解く</span>
-    </h1>
-
-    <p class="fv-sub">
-      生まれた瞬間の星の配置には、<br>
-      <b>あなただけの取扱説明書</b>が刻まれています。
-    </p>
-
     <div class="offer">
-      <span class="offer-flag">参加費 0 円</span>
       <h2>しあわせ超開運メソッド<br><span class="free">無料動画セミナー</span></h2>
       <p class="offer-note">公式LINEにご登録の方へ、順にお届けします</p>
 
