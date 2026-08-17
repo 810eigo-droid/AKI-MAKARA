@@ -313,7 +313,10 @@ section{position:relative}
 }
 .problem > *{position:relative;z-index:1}
 .problem .problem-close{margin-top:clamp(26px,5vw,38px)}
-/* セクションまるごとを1枚の画像で見せるときの共通スタイル。
+/* 画像の width/height 属性は付けていない。付けると画像を差し替えたとき
+   比率がズレるため。高さは読み込んだ画像の比率から自動で決まる。
+
+   セクションまるごとを1枚の画像で見せるときの共通スタイル。
    スマホでは画面いっぱい、PCでは760pxで中央。
    画像自体に余白と装飾が含まれているので、角丸や影は付けない */
 .sect-img{
@@ -648,7 +651,7 @@ footer .cr{font-family:var(--script);font-style:italic;letter-spacing:.1em;margi
   <h1 class="sr-only">星々が教えてくれる、あなたの魂の設計図 — 才能・使命・飛躍のタイミングを読み解く「しあわせ超開運メソッド」無料動画セミナー（参加費0円）</h1>
 
   <a class="fv-img" href="#entry" aria-label="LINEで無料セミナーを受け取る">
-    <img src="images/fv.webp" alt="" width="1170" height="2532" fetchpriority="high" decoding="async">
+    <img src="images/fv.webp" alt="" fetchpriority="high" decoding="async">
   </a>
 
   <div class="wrap fv-inner">
@@ -684,8 +687,7 @@ footer .cr{font-family:var(--script);font-style:italic;letter-spacing:.1em;margi
   <h2 class="sr-only">こんなお悩み、ありませんか？ ／ 努力しているのに、なぜか空回りしてしまう ／ 自分の本当にやりたいことが、よく分からない ／ 「私の使命って何だろう」と考えることがある ／ 環境を変えても、同じパターンを繰り返してしまう ／ 占いは好きだけど、その先の行動につながらない ／ 今が動くべき時なのか、待つべき時なのか迷っている</h2>
 
   <img class="sect-img rv" src="images/check.webp"
-       alt="こんなお悩み、ありませんか？ 努力しているのに空回りしてしまう／やりたいことが分からない／自分の使命を考えることがある／環境を変えても同じパターンを繰り返す／占いが行動につながらない／動くべき時か待つべき時か迷っている"
-       width="1122" height="1402" loading="lazy" decoding="async">
+       alt="こんなお悩み、ありませんか？ 努力しているのに空回りしてしまう／やりたいことが分からない／自分の使命を考えることがある／環境を変えても同じパターンを繰り返す／占いが行動につながらない／動くべき時か待つべき時か迷っている" loading="lazy" decoding="async">
 
   <div class="wrap">
     <p class="problem-close rv">
@@ -739,17 +741,17 @@ footer .cr{font-family:var(--script);font-style:italic;letter-spacing:.1em;margi
 
     <div class="gift-grid">
       <a class="giftcard rv" href="#entry">
-        <img src="images/gift-01.webp" alt="特典1／星が知らせる、あなたの魂の傾向シート" width="1122" height="1402" loading="lazy" decoding="async">
+        <img src="images/gift-01.webp" alt="特典1／星が知らせる、あなたの魂の傾向シート" loading="lazy" decoding="async">
         <span class="sr-only">特典1／星が知らせる、あなたの魂の傾向シート。生まれ持った性質・強み・つまずきやすいポイントを一枚に整理。自分の取扱説明書として手元に置けます。</span>
       </a>
 
       <a class="giftcard rv" href="#entry">
-        <img src="images/gift-02.webp" alt="特典2／あなたの願いが叶うまでのロードマップ" width="1122" height="1402" loading="lazy" decoding="async">
+        <img src="images/gift-02.webp" alt="特典2／あなたの願いが叶うまでのロードマップ" loading="lazy" decoding="async">
         <span class="sr-only">特典2／あなたの願いが叶うまでのロードマップ。「いつ・何から動くか」を時系列で可視化。漠然とした願いを、今日からの行動に落とし込みます。</span>
       </a>
 
       <a class="giftcard rv" href="#entry">
-        <img src="images/gift-03.webp" alt="特典3／観るだけで整う、開運ヒーリング動画" width="1122" height="1402" loading="lazy" decoding="async">
+        <img src="images/gift-03.webp" alt="特典3／観るだけで整う、開運ヒーリング動画" loading="lazy" decoding="async">
         <span class="sr-only">特典3／観るだけで整う、開運ヒーリング動画。1日3分、眺めるだけ。心の状態をやさしく整えて、理想の未来を受け取る準備をしていきます。</span>
       </a>
     </div>
