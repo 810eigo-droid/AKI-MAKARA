@@ -298,27 +298,14 @@ section{position:relative}
    PROBLEM  (共感チェック)
    ============================================================ */
 .problem{background:var(--paper-2)}
-.check{
-  list-style:none;margin:0 auto;padding:0;max-width:560px;
+/* セクションまるごとを1枚の画像で見せるときの共通スタイル。
+   スマホでは画面いっぱい、PCでは620pxで中央に置く */
+.sect-img{
+  display:block;width:100%;max-width:620px;
+  margin:0 auto clamp(28px,6vw,40px);
 }
-.check li{
-  background:#fff;border-radius:14px;
-  padding:15px 18px 15px 50px;margin-bottom:11px;
-  font-size:14.5px;line-height:1.7;font-weight:500;
-  position:relative;box-shadow:0 6px 18px -12px rgba(60,35,110,.4);
-  border:1px solid rgba(139,107,199,.14);
-}
-.check li::before{
-  content:"";position:absolute;left:17px;top:19px;
-  width:17px;height:17px;border-radius:4px;
-  border:2px solid var(--violet);
-}
-.check li::after{
-  content:"";position:absolute;left:22px;top:22px;
-  width:6px;height:11px;
-  border-right:2.5px solid var(--gold);border-bottom:2.5px solid var(--gold);
-  transform:rotate(42deg);
-}
+@media (min-width:640px){ .sect-img{border-radius:16px;box-shadow:var(--shadow)} }
+
 .problem-close{
   text-align:center;margin:32px auto 0;max-width:30em;
   font-family:var(--serif);font-size:clamp(15px,4vw,19px);
@@ -431,7 +418,9 @@ section{position:relative}
   box-shadow:0 12px 30px -14px rgba(90,50,110,.6),0 0 0 5px #fff,0 0 0 6px var(--gold-lt);
   font-family:var(--script);font-style:italic;font-size:34px;color:#fff;
   text-shadow:0 2px 8px rgba(90,50,110,.4);
+  overflow:hidden;
 }
+.pf-photo img{width:100%;height:100%;object-fit:cover;border-radius:50%}
 .pf-name{font-family:var(--serif);font-weight:900;font-size:22px;margin:0;color:var(--ink);line-height:1.4}
 .pf-en{font-family:var(--script);font-style:italic;font-size:15px;color:var(--gold);letter-spacing:.12em;margin:2px 0 8px}
 .pf-role{font-size:12.5px;color:var(--muted);line-height:1.7;margin:0}
@@ -666,21 +655,16 @@ footer .cr{font-family:var(--script);font-style:italic;letter-spacing:.1em;margi
 </section>
 
 <!-- ==================== PROBLEM ==================== -->
+<!-- 見出し＋チェックリストは images/check.webp に含まれる。
+     締めの一文だけはHTMLに残してある（あとから差し替えやすいように） -->
 <section class="problem pad">
+  <h2 class="sr-only">こんなお悩み、ありませんか？ ／ 努力しているのに、なぜか空回りしてしまう ／ 自分の本当にやりたいことが、よく分からない ／ 「私の使命って何だろう」と考えることがある ／ 環境を変えても、同じパターンを繰り返してしまう ／ 占いは好きだけど、その先の行動につながらない ／ 今が動くべき時なのか、待つべき時なのか迷っている</h2>
+
+  <img class="sect-img rv" src="images/check.webp"
+       alt="こんなお悩み、ありませんか？ 努力しているのに空回りしてしまう／やりたいことが分からない／自分の使命を考えることがある／環境を変えても同じパターンを繰り返す／占いが行動につながらない／動くべき時か待つべき時か迷っている"
+       width="1122" height="1402" loading="lazy" decoding="async">
+
   <div class="wrap">
-    <p class="eyebrow rv">Check</p>
-    <h2 class="h2 rv">こんなお悩み、<em>ありませんか？</em></h2>
-    <div class="rule rv"></div>
-
-    <ul class="check">
-      <li class="rv">努力しているのに、なぜか空回りしてしまう</li>
-      <li class="rv">自分の本当にやりたいことが、よく分からない</li>
-      <li class="rv">「私の使命って何だろう」と考えることがある</li>
-      <li class="rv">環境を変えても、同じパターンを繰り返してしまう</li>
-      <li class="rv">占いは好きだけど、その先の行動につながらない</li>
-      <li class="rv">今が動くべき時なのか、待つべき時なのか迷っている</li>
-    </ul>
-
     <p class="problem-close rv">
       ひとつでも当てはまったなら、<br>
       それは能力の問題ではなく<br>
@@ -760,7 +744,7 @@ footer .cr{font-family:var(--script);font-style:italic;letter-spacing:.1em;margi
 
     <div class="pf rv">
       <div class="pf-top">
-        <div class="pf-photo">A</div>
+        <div class="pf-photo"><img src="images/aki.webp" alt="真果楽アキ" width="800" height="800" loading="lazy" decoding="async"></div>
         <div>
           <h3 class="pf-name">真果楽 アキ</h3>
           <p class="pf-en">AKI MAKARA</p>
