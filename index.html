@@ -386,42 +386,22 @@ section{position:relative}
 .gifts .h2{color:#fff}
 .gifts .h2 em{color:var(--gold-lt)}
 .gifts .h2-sub{color:rgba(255,255,255,.66)}
-.gift-grid{display:grid;gap:16px}
-.gift{
-  background:rgba(255,255,255,.055);
-  border:1px solid rgba(255,255,255,.14);
-  border-radius:var(--radius);
-  overflow:hidden;
-  backdrop-filter:blur(6px);
-  text-align:center;
+/* 特典カードは画像1枚がカード全体。文字も画像に含まれているため、
+   HTML側にはテキストを置かない（検索エンジン用に .sr-only で保持）。
+   画像を差し替えるだけで内容が変わる。 */
+.gift-grid{display:grid;gap:18px;width:100%}
+/* 特典セクションだけ、カードを少しでも大きく見せるため横幅を広く取る */
+.wrap-gift{width:min(1180px,calc(100% - 28px));margin-inline:auto}
+.giftcard{
+  display:block;border-radius:14px;overflow:hidden;
+  box-shadow:0 22px 50px -24px rgba(0,0,0,.75);
+  transition:transform .3s ease,box-shadow .3s ease;
 }
-/* 特典画像は「上部のイラスト部分だけ」を帯として見せる。
-   画像下half に焼き込まれた文字は object-fit で切り落とし、
-   文字はHTML側（.gift-body）で表示する＝あとから修正できる */
-.gift-visual{
-  aspect-ratio:2/1;
-  overflow:hidden;position:relative;
+.giftcard img{width:100%;height:auto;display:block}
+.giftcard:hover{
+  transform:translateY(-5px);
+  box-shadow:0 30px 60px -22px rgba(0,0,0,.85);
 }
-.gift-visual img{
-  width:100%;height:100%;display:block;
-  object-fit:cover;object-position:center top;
-}
-.gift-body{padding:18px 20px 22px}
-.g1{background:radial-gradient(circle at 40% 32%,#F3E4FF,#9A7BD6 52%,#4E3585)}
-.g2{background:radial-gradient(circle at 40% 32%,#FFE6F2,#E39BC2 52%,#9B5C86)}
-.g3{background:radial-gradient(circle at 40% 32%,#FFF6DE,#E4CE94 52%,#9A7C36)}
-
-.gift-tag{
-  display:inline-block;font-size:10.5px;font-weight:900;letter-spacing:.16em;
-  color:var(--ink);background:var(--gold-lt);
-  padding:3px 11px;border-radius:999px;margin-bottom:8px;
-}
-.gift h3{
-  font-family:var(--serif);font-weight:900;
-  font-size:clamp(15.5px,4vw,19px);line-height:1.55;
-  margin:0 0 7px;color:#fff;
-}
-.gift p{margin:0;font-size:13px;line-height:1.8;color:rgba(255,255,255,.72)}
 .gifts .value{
   margin-top:26px;text-align:center;
   font-family:var(--serif);font-size:clamp(15px,4vw,19px);font-weight:700;
@@ -625,7 +605,7 @@ footer .cr{font-family:var(--script);font-style:italic;letter-spacing:.1em;margi
   .offer-list li{font-size:14px;padding:7px 4px}
   .scroll-cue{margin-top:20px}
   .scroll-cue span{height:26px}
-  .gift-grid{grid-template-columns:repeat(3,1fr)}
+  .gift-grid{grid-template-columns:repeat(3,1fr);gap:22px}
   .voice-grid{grid-template-columns:repeat(3,1fr)}
   .step-grid{grid-template-columns:repeat(3,1fr);max-width:none}
   .st{padding:24px 20px 22px;text-align:center}
@@ -745,44 +725,26 @@ footer .cr{font-family:var(--script);font-style:italic;letter-spacing:.1em;margi
 
 <!-- ==================== GIFTS ==================== -->
 <section class="gifts pad">
-  <div class="wrap-w">
+  <div class="wrap-gift">
     <p class="eyebrow rv">Gift</p>
     <h2 class="h2 rv">ご登録後、すぐに届く<em>3つの特典</em></h2>
     <p class="h2-sub rv">公式LINEにご登録いただいた瞬間、無料動画セミナーとあわせてお受け取りいただけます。</p>
 
     <div class="gift-grid">
-      <div class="gift rv">
-        <div class="gift-visual g1">
-          <img src="images/gift-01.webp" alt="星が知らせる、あなたの魂の傾向シート" width="800" height="800" loading="lazy" decoding="async">
-        </div>
-        <div class="gift-body">
-          <span class="gift-tag">特典 01</span>
-          <h3>星が知らせる<br>あなたの魂の傾向シート</h3>
-          <p>生まれ持った性質・強み・つまずきやすいポイントを一枚に整理。自分の取扱説明書として手元に置けます。</p>
-        </div>
-      </div>
+      <a class="giftcard rv" href="#entry">
+        <img src="images/gift-01.webp" alt="特典1／星が知らせる、あなたの魂の傾向シート" width="1122" height="1402" loading="lazy" decoding="async">
+        <span class="sr-only">特典1／星が知らせる、あなたの魂の傾向シート。生まれ持った性質・強み・つまずきやすいポイントを一枚に整理。自分の取扱説明書として手元に置けます。</span>
+      </a>
 
-      <div class="gift rv">
-        <div class="gift-visual g2">
-          <img src="images/gift-02.webp" alt="あなたの願いが叶うまでのロードマップ" width="800" height="800" loading="lazy" decoding="async">
-        </div>
-        <div class="gift-body">
-          <span class="gift-tag">特典 02</span>
-          <h3>あなたの願いが叶う<br>までのロードマップ</h3>
-          <p>「いつ・何から動くか」を時系列で可視化。漠然とした願いを、今日からの行動に落とし込みます。</p>
-        </div>
-      </div>
+      <a class="giftcard rv" href="#entry">
+        <img src="images/gift-02.webp" alt="特典2／あなたの願いが叶うまでのロードマップ" width="1122" height="1402" loading="lazy" decoding="async">
+        <span class="sr-only">特典2／あなたの願いが叶うまでのロードマップ。「いつ・何から動くか」を時系列で可視化。漠然とした願いを、今日からの行動に落とし込みます。</span>
+      </a>
 
-      <div class="gift rv">
-        <div class="gift-visual g3">
-          <img src="images/gift-03.webp" alt="観るだけで整う、開運ヒーリング動画" width="800" height="800" loading="lazy" decoding="async">
-        </div>
-        <div class="gift-body">
-          <span class="gift-tag">特典 03</span>
-          <h3>観るだけで整う<br>開運ヒーリング動画</h3>
-          <p>1日3分、眺めるだけ。心の状態をやさしく整えて、理想の未来を受け取る準備をしていきます。</p>
-        </div>
-      </div>
+      <a class="giftcard rv" href="#entry">
+        <img src="images/gift-03.webp" alt="特典3／観るだけで整う、開運ヒーリング動画" width="1122" height="1402" loading="lazy" decoding="async">
+        <span class="sr-only">特典3／観るだけで整う、開運ヒーリング動画。1日3分、眺めるだけ。心の状態をやさしく整えて、理想の未来を受け取る準備をしていきます。</span>
+      </a>
     </div>
 
     <p class="value rv"><s>通常 12,800円相当</s>　→　今だけ <b>すべて無料</b></p>
