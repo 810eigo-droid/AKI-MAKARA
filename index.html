@@ -424,21 +424,7 @@ section{position:relative}
 .pf-name{font-family:var(--serif);font-weight:900;font-size:22px;margin:0;color:var(--ink);line-height:1.4}
 .pf-en{font-family:var(--script);font-style:italic;font-size:15px;color:var(--gold);letter-spacing:.12em;margin:2px 0 8px}
 .pf-role{font-size:12.5px;color:var(--muted);line-height:1.7;margin:0}
-.pf-body{padding:24px}
-.pf-body p{font-size:14px;line-height:2;margin:0 0 14px}
-.pf-body p:last-child{margin:0}
-.pf-stats{
-  display:grid;grid-template-columns:repeat(3,1fr);
-  gap:1px;background:var(--line);margin:0 0 20px;
-  border-radius:12px;overflow:hidden;
-}
-.pf-stats div{background:#fff;padding:14px 6px;text-align:center}
-.pf-stats .n{
-  font-family:var(--serif);font-weight:900;
-  font-size:clamp(20px,5.4vw,26px);color:var(--violet);line-height:1.2;
-}
-.pf-stats .n small{font-size:.55em;color:var(--muted);font-weight:700}
-.pf-stats .l{font-size:10.5px;color:var(--muted);letter-spacing:.04em;margin-top:2px}
+.pf-img{display:block;width:100%;height:auto}
 
 /* ============================================================
    VOICE
@@ -744,23 +730,18 @@ footer .cr{font-family:var(--script);font-style:italic;letter-spacing:.1em;margi
 
     <div class="pf rv">
       <div class="pf-top">
-        <div class="pf-photo"><img src="images/aki.webp" alt="真果楽アキ" width="800" height="800" loading="lazy" decoding="async"></div>
+        <div class="pf-photo"><img src="images/aki.webp" alt="真果楽アキ" width="1254" height="1254" loading="lazy" decoding="async"></div>
         <div>
           <h3 class="pf-name">真果楽 アキ</h3>
           <p class="pf-en">AKI MAKARA</p>
           <p class="pf-role">スピリチュアルヒーリングサロン主宰<br>／ 魂の設計図リーダー</p>
         </div>
       </div>
-      <div class="pf-body">
-        <div class="pf-stats">
-          <div><div class="n">1,200<small>名+</small></div><div class="l">鑑定実績</div></div>
-          <div><div class="n">12<small>年</small></div><div class="l">活動年数</div></div>
-          <div><div class="n">96<small>%</small></div><div class="l">満足度</div></div>
-        </div>
-        <p>星々が伝える「魂の設計図」を読み解き、その人が本来の姿で生きるためのサポートを行っています。</p>
-        <p>スピリチュアルは、決してふわふわしたものではありません。正しく読み解けば、日々の選択を支えてくれる確かな指針になります。「もう占いはいらない」——そう言えるところまで、あなたご自身の力で歩けるようになることが、私の願いです。</p>
-        <p>星々の声と、あなたの本当の願いが重なる場所へ。ぜひ一緒に向かいましょう。</p>
-      </div>
+      <!-- 実績数値と本文は images/profile.webp に含まれる -->
+      <!-- 比率をHTMLで固定していないので、横長・縦長どちらの画像でもそのまま表示される -->
+      <img class="pf-img" src="images/profile.webp"
+           alt="鑑定実績1,200名以上、活動年数12年、満足度96%。星々が伝える「魂の設計図」を読み解き、その人が本来の姿で生きるためのサポートを行っています。"
+           loading="lazy" decoding="async">
     </div>
   </div>
 </section>
