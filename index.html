@@ -320,7 +320,7 @@ section{position:relative}
    スマホでは画面いっぱい、PCでは760pxで中央。
    画像自体に余白と装飾が含まれているので、角丸や影は付けない */
 .sect-img{
-  display:block;width:100%;height:auto;max-width:760px;
+  display:block;width:100%;height:auto;max-width:520px;
   margin:0 auto;
 }
 
@@ -455,6 +455,15 @@ section{position:relative}
     gap:14px;padding:26px 18px 30px;
   }
   .pf-photo{width:124px}
+}
+
+
+/* PCでの画像の幅を全セクションで揃える。
+   画像はすべてスマホ用（縦長）に作られているので、横に広げるほど
+   画像内の文字だけが大きくなり、HTML側の文字と不揃いになる。
+   FV・お悩み・プロフィールを同じ520pxの列幅に統一する */
+@media (min-width:820px){
+  .pf{width:min(520px,100%);margin-inline:auto}
 }
 
 /* ============================================================
