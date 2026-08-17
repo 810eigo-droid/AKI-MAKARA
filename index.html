@@ -570,6 +570,8 @@ section{position:relative}
 }
 .closing .h2{color:#fff}
 .closing .h2 em{color:var(--gold-lt)}
+/* 画像の下に「今すぐ受け取れるもの」カードとCTAが続く */
+.closing .sect-img{margin-bottom:clamp(26px,5vw,36px)}
 .cl-msg{
   text-align:center;max-width:30em;margin:0 auto clamp(28px,6vw,40px);
   font-size:14.5px;line-height:2.05;color:rgba(255,255,255,.86);
@@ -901,15 +903,11 @@ footer .cr{font-family:var(--script);font-style:italic;letter-spacing:.1em;margi
 <!-- ==================== CLOSING ==================== -->
 <section class="closing pad on-dark">
   <div class="wrap">
-    <p class="eyebrow rv" style="color:var(--gold-lt)">Last message</p>
-    <h2 class="h2 rv">その一歩を、<em>今日から</em></h2>
+    <h2 class="sr-only">その一歩を、今日から。設計図を知らないまま走り続けるのか。それとも、自分の地図を手にして進むのか。違いが生まれるのは、いつも小さな一歩からです。あなたが本来の姿で輝く未来を、心よりお待ちしています。</h2>
 
-    <p class="cl-msg rv">
-      設計図を知らないまま走り続けるのか。<br>
-      それとも、<b>自分の地図を手にして進む</b>のか。<br><br>
-      違いが生まれるのは、いつも小さな一歩からです。<br>
-      あなたが本来の姿で輝く未来を、心よりお待ちしています。
-    </p>
+    <img class="sect-img rv" src="images/closing.webp"
+         alt="その一歩を、今日から。設計図を知らないまま走り続けるのか。それとも、自分の地図を手にして進むのか。"
+         loading="lazy" decoding="async">
 
     <div class="recap rv">
       <h4>― 今すぐ受け取れるもの ―</h4>
