@@ -50,6 +50,33 @@ body{
 img{max-width:100%;display:block}
 a{color:inherit}
 
+/* ============================================================
+   SAMPLE 透かし
+   ------------------------------------------------------------
+   本番公開時は <body class="is-sample"> の is-sample を消すだけで、
+   透かしと左上のDEMOバッジが両方まとめて消えます。
+   ============================================================ */
+.watermark,.demo-badge{display:none}
+body.is-sample .watermark,
+body.is-sample .demo-badge{display:block}
+
+.watermark{
+  position:fixed; inset:0; z-index:190;
+  pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27 width%3D%27320%27 height%3D%27260%27%3E%3Ctext x%3D%27160%27 y%3D%27140%27 font-family%3D%27Helvetica%2CArial%2Csans-serif%27 font-size%3D%2738%27 font-weight%3D%27700%27 letter-spacing%3D%277%27 text-anchor%3D%27middle%27 transform%3D%27rotate(-28 160 130)%27 stroke%3D%27%23ffffff%27 stroke-width%3D%274%27 stroke-opacity%3D%270.55%27 fill%3D%27%233a3a3a%27 paint-order%3D%27stroke%27%3ESAMPLE%3C%2Ftext%3E%3C%2Fsvg%3E");
+  background-repeat:repeat;
+  background-size:280px 228px;
+  /* 中間グレー＋白フチ。白いカード上でも紫背景上でも同じように読める。
+     mix-blend-mode は position:fixed と併用するとChromiumで描画が崩れるため使わない */
+  opacity:.34;
+}
+@media (max-width:600px){
+  .watermark{background-size:200px 163px;opacity:.3}
+}
+@media print{
+  .watermark{opacity:.45}
+}
+
 /* ---------- DEMO badge ---------- */
 .demo-badge{
   position:fixed; top:0; left:0; z-index:200;
@@ -596,9 +623,14 @@ footer .cr{font-family:var(--script);font-style:italic;letter-spacing:.1em;margi
 }
 </style>
 </head>
-<body>
+<!-- ============================================================
+     本番公開時は、下の <body> から  class="is-sample"  を削除してください。
+     それだけでSAMPLE透かしと左上のDEMOバッジが両方消えます。
+     ============================================================ -->
+<body class="is-sample">
 
-<div class="demo-badge">DEMO — 改善提案サンプル / Teach &amp; Funnel Design</div>
+<div class="watermark" aria-hidden="true"></div>
+<div class="demo-badge">SAMPLE — 改善提案 / Teach &amp; Funnel Design　※無断使用禁止</div>
 
 <!-- ==================== FV ==================== -->
 <section class="fv">
