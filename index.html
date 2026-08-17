@@ -404,6 +404,9 @@ section{position:relative}
 .g2{background:radial-gradient(circle at 40% 32%,#FFE6F2,#E39BC2 52%,#9B5C86)}
 .g3{background:radial-gradient(circle at 40% 32%,#FFF6DE,#E4CE94 52%,#9A7C36)}
 .gift-visual svg{width:46%;height:46%;opacity:.92}
+/* 特典画像。images/gift-0N.webp を差し替えるだけで反映される。
+   画像が無い場合は下地のグラデーション（.g1/.g2/.g3）がそのまま見える */
+.gift-visual img{width:100%;height:100%;object-fit:cover;display:block}
 .gift-tag{
   display:inline-block;font-size:10.5px;font-weight:900;letter-spacing:.16em;
   color:var(--ink);background:var(--gold-lt);
@@ -749,9 +752,7 @@ footer .cr{font-family:var(--script);font-style:italic;letter-spacing:.1em;margi
     <div class="gift-grid">
       <div class="gift rv">
         <div class="gift-visual g1">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 2 L14.6 8.4 L21.5 9 L16.3 13.5 L17.9 20.3 L12 16.7 L6.1 20.3 L7.7 13.5 L2.5 9 L9.4 8.4 Z"/>
-          </svg>
+          <img src="images/gift-01.webp" alt="" width="800" height="800" loading="lazy" decoding="async">
         </div>
         <div>
           <span class="gift-tag">特典 01</span>
@@ -762,10 +763,7 @@ footer .cr{font-family:var(--script);font-style:italic;letter-spacing:.1em;margi
 
       <div class="gift rv">
         <div class="gift-visual g2">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M3 19 C7 19 7 11 11 11 C15 11 15 5 21 5"/>
-            <circle cx="21" cy="5" r="2"/><circle cx="11" cy="11" r="1.6"/><circle cx="3" cy="19" r="1.6"/>
-          </svg>
+          <img src="images/gift-02.webp" alt="" width="800" height="800" loading="lazy" decoding="async">
         </div>
         <div>
           <span class="gift-tag">特典 02</span>
@@ -776,9 +774,7 @@ footer .cr{font-family:var(--script);font-style:italic;letter-spacing:.1em;margi
 
       <div class="gift rv">
         <div class="gift-visual g3">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 20 C12 20 4 15.5 4 10.5 C4 7.5 6.2 6 8 6 C9.8 6 12 7.8 12 10 C12 7.8 14.2 6 16 6 C17.8 6 20 7.5 20 10.5 C20 15.5 12 20 12 20 Z"/>
-          </svg>
+          <img src="images/gift-03.webp" alt="" width="800" height="800" loading="lazy" decoding="async">
         </div>
         <div>
           <span class="gift-tag">特典 03</span>
