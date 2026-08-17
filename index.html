@@ -464,18 +464,29 @@ section{position:relative}
   position:relative;
 }
 .vc::before{
-  content:"“";position:absolute;top:2px;left:16px;
+  content:"“";position:absolute;top:2px;right:18px;
   font-family:var(--script);font-size:64px;color:var(--pink-lt);line-height:1;
 }
-.vc-stars{color:var(--gold);font-size:13px;letter-spacing:.22em;margin-bottom:8px}
+/* 顔アイコン＋星＋属性の並び。画像は images/voice-0N.webp を差し替えるだけ */
+.vc-head{
+  display:flex;align-items:center;gap:13px;
+  margin-bottom:14px;position:relative;
+}
+.vc-face{
+  flex:0 0 58px;width:58px;height:58px;
+  border-radius:50%;object-fit:cover;
+  background:linear-gradient(140deg,#F7DCEB,#C9AEDB);
+  box-shadow:0 0 0 3px #fff,0 0 0 4px var(--pink-lt),0 10px 20px -12px rgba(90,50,110,.65);
+}
+.vc-stars{color:var(--gold);font-size:13px;letter-spacing:.22em;margin:0}
 .vc h4{
   font-family:var(--serif);font-weight:900;font-size:16px;line-height:1.6;
   margin:0 0 10px;color:var(--ink);position:relative;
 }
 .vc p{margin:0 0 14px;font-size:13.5px;line-height:1.95;color:var(--text)}
 .vc .who{
-  font-size:12px;color:var(--muted);text-align:right;margin:0;
-  padding-top:10px;border-top:1px dashed var(--line);
+  font-size:12px;color:var(--muted);text-align:left;
+  margin:3px 0 0;font-weight:500;
 }
 
 /* ============================================================
@@ -781,22 +792,37 @@ footer .cr{font-family:var(--script);font-style:italic;letter-spacing:.1em;margi
 
     <div class="voice-grid">
       <div class="vc rv">
-        <p class="vc-stars">★★★★★</p>
+        <div class="vc-head">
+          <img class="vc-face" src="images/voice-01.webp" alt="" width="500" height="500" loading="lazy" decoding="async">
+          <div>
+            <p class="vc-stars">★★★★★</p>
+            <p class="who">40代・女性・会社員</p>
+          </div>
+        </div>
         <h4>自分を責めなくなりました</h4>
         <p>うまくいかないのは努力が足りないからだと思っていました。設計図を知って、ただ向いていない方向に力を入れていただけだと気づけたんです。</p>
-        <p class="who">40代・女性・会社員</p>
       </div>
       <div class="vc rv">
-        <p class="vc-stars">★★★★★</p>
+        <div class="vc-head">
+          <img class="vc-face" src="images/voice-02.webp" alt="" width="500" height="500" loading="lazy" decoding="async">
+          <div>
+            <p class="vc-stars">★★★★★</p>
+            <p class="who">30代・女性・自営業</p>
+          </div>
+        </div>
         <h4>動くべき時期が分かった</h4>
         <p>ずっと迷っていた転職に、踏み切ることができました。「今がその時期」と背中を押してもらえたのが大きかったです。</p>
-        <p class="who">30代・自営業</p>
       </div>
       <div class="vc rv">
-        <p class="vc-stars">★★★★★</p>
+        <div class="vc-head">
+          <img class="vc-face" src="images/voice-03.webp" alt="" width="500" height="500" loading="lazy" decoding="async">
+          <div>
+            <p class="vc-stars">★★★★★</p>
+            <p class="who">50代・女性・主婦</p>
+          </div>
+        </div>
         <h4>動画が分かりやすかった</h4>
         <p>難しい用語がなく、はじめてでもすんなり入ってきました。無料でここまで教えてくださるとは思っていませんでした。</p>
-        <p class="who">50代・主婦</p>
       </div>
     </div>
   </div>
