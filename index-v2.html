@@ -646,6 +646,12 @@ footer .cr{font-family:var(--script);font-style:italic;letter-spacing:.1em;margi
 }
 
 /* ===== v2 追加分 ===== */
+/* PC用FV：900px以上では横長画像を幅いっぱい（上限1600px）で表示する */
+@media (min-width:900px){
+  .fv .fv-img{max-width:1600px}
+}
+.fv-img picture{display:block}
+
 .gift-item{display:flex;flex-direction:column;gap:10px}
 .gift-cap{margin:0 4px;font-size:13.5px;line-height:1.75;color:rgba(255,255,255,.85)}
 .gift-cap b{color:var(--gold-lt);font-weight:700}
@@ -674,7 +680,11 @@ footer .cr{font-family:var(--script);font-style:italic;letter-spacing:.1em;margi
   <h1 class="sr-only">星々が教えてくれる、あなたの魂の設計図 — 才能・使命・飛躍のタイミングを読み解く「しあわせ超開運メソッド」無料動画セミナー（参加費0円）</h1>
 
   <a class="fv-img" href="#entry" aria-label="LINEで無料セミナーを受け取る">
-    <img src="images/fv.webp" alt="" fetchpriority="high" decoding="async">
+    <picture>
+      <!-- 900px以上ではPC用の横長FV、それ未満ではスマホ用の縦長FVが表示される -->
+      <source media="(min-width: 900px)" srcset="images/fv2-pc.webp">
+      <img src="images/fv2-sp.webp" alt="" fetchpriority="high" decoding="async">
+    </picture>
   </a>
 
   <div class="wrap fv-inner">
