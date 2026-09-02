@@ -649,6 +649,8 @@ footer .cr{font-family:var(--script);font-style:italic;letter-spacing:.1em;margi
 /* PC用FV：900px以上では横長画像を幅いっぱい（上限1600px）で表示する */
 @media (min-width:900px){
   .fv .fv-img{max-width:1600px}
+  /* お悩みセクション：PCでは特典セクションと同じ横幅（1180px）まで広げる */
+  .problem .sect-img{max-width:min(1180px,calc(100% - 28px))}
 }
 .fv-img picture{display:block}
 
@@ -679,7 +681,7 @@ footer .cr{font-family:var(--script);font-style:italic;letter-spacing:.1em;margi
 <section class="fv">
   <h1 class="sr-only">星々が教えてくれる、あなたの魂の設計図 — 才能・使命・飛躍のタイミングを読み解く「しあわせ超開運メソッド」無料動画セミナー（参加費0円）</h1>
 
-  <a class="fv-img" href="#entry" aria-label="LINEで無料セミナーを受け取る">
+  <a class="fv-img" href="#entry" aria-label="無料動画セミナーを受け取る">
     <picture>
       <!-- 900px以上ではPC用の横長FV、それ未満ではスマホ用の縦長FVが表示される -->
       <source media="(min-width: 900px)" srcset="images/fv2-pc.webp">
@@ -697,15 +699,17 @@ footer .cr{font-family:var(--script);font-style:italic;letter-spacing:.1em;margi
         <li><span class="ic">▶</span><span><b>全3回の動画セミナー</b>／各15分・スマホ視聴可。<br>観終わる頃には「自分はどこへ向かえばいいのか」の判断軸が手に入ります</span></li>
         <li><span class="ic">1</span><span><b>特典1</b>／星が知らせる、あなたの魂の傾向シート</span></li>
         <li><span class="ic">2</span><span><b>特典2</b>／願いが叶うまでのロードマップ</span></li>
-        <li><span class="ic">3</span><span><b>特典3</b>／観るだけで整う、開運ヒーリング動画</span></li>
+        <li><span class="ic">3</span><span><b>特典3</b>／観るだけで整う、開運ヒーリング動画<br>（公式LINEにご登録の方への限定特典）</span></li>
       </ul>
 
+      <!-- ▼登録ボタン（仮）。マイスピーのフォームURLが発行されたら
+           href="#entry" をそのURLに一括置換する（全ボタン共通） -->
       <a class="cta" href="#entry">
-        <span class="sm">＼ 30秒で完了 ／</span>
-        LINEで無料セミナーを受け取る
+        <span class="sm">＼ メールアドレスを入れるだけ・30秒 ／</span>
+        無料動画セミナーを受け取る
       </a>
       <p class="cta-note">
-        ※ 費用は一切かかりません／<b>いつでもブロック可能</b>です
+        ※ 費用は一切かかりません／<b>ワンクリックでいつでも解除</b>できます
       </p>
     </div>
 
@@ -889,17 +893,17 @@ footer .cr{font-family:var(--script);font-style:italic;letter-spacing:.1em;margi
       <div class="st rv">
         <div class="no">1</div>
         <h4>ボタンをタップ</h4>
-        <p>下のボタンから公式LINEの友だち追加画面へ進みます。</p>
+        <p>下のボタンから登録フォームへ進みます。</p>
       </div>
       <div class="st rv">
         <div class="no">2</div>
-        <h4>友だち追加</h4>
-        <p>「追加」を押すだけ。入力フォームはありません。</p>
+        <h4>メールアドレスを入力</h4>
+        <p>ご入力いただくのはメールアドレスだけ。お名前も不要です。</p>
       </div>
       <div class="st rv">
         <div class="no">3</div>
         <h4>すぐに受け取る</h4>
-        <p>動画セミナーと3つの特典が、その場で届きます。</p>
+        <p>動画セミナーと特典がその場でメールで届きます。LINE限定特典のご案内もお送りします。</p>
       </div>
     </div>
   </div>
@@ -959,10 +963,10 @@ footer .cr{font-family:var(--script);font-style:italic;letter-spacing:.1em;margi
     <p class="closing-push rv">この設計図は、生まれたときからずっと<br>あなたの中にあります。<br>あとは<em>「読み方」</em>を知るだけです。</p>
 
     <a class="cta rv" href="#entry">
-      <span class="sm">＼ 参加費0円・30秒で完了 ／</span>
-      LINEで無料セミナーを受け取る
+      <span class="sm">＼ 参加費0円・メールアドレスだけ ／</span>
+      無料動画セミナーを受け取る
     </a>
-    <p class="cta-note rv">※ 費用は一切かかりません／<b>いつでもブロック可能</b>です</p>
+    <p class="cta-note rv">※ 費用は一切かかりません／<b>ワンクリックでいつでも解除</b>できます</p>
   </div>
 </section>
 
@@ -979,7 +983,7 @@ footer .cr{font-family:var(--script);font-style:italic;letter-spacing:.1em;margi
 <div class="sticky" id="sticky">
   <a class="cta" href="#entry">
     <span class="sm">＼ 参加費0円 ／</span>
-    LINEで無料セミナーを受け取る
+    無料動画セミナーを受け取る
   </a>
 </div>
 
