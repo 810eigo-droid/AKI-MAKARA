@@ -7,6 +7,7 @@
 ```
 
 **公開URL** ： https://810eigo-droid.github.io/AKI-MAKARA/
+**改善版v2** ： https://810eigo-droid.github.io/AKI-MAKARA/index-v2.html （文章強化版。変更内容は [COPY-V2.md](COPY-V2.md)）
 
 ---
 
@@ -116,6 +117,7 @@ GPTで出せる最も縦長の比率は **1024 × 1536（2:3）** です。そ�
 | ファイル | 内容 |
 |---|---|
 | [EDIT.md](EDIT.md) | VS Codeでの編集ガイド。差し替え箇所を行番号つきで一覧 |
+| [COPY-V2.md](COPY-V2.md) | 改善版v2の文章変更点と、FV画像を作り直す場合のコピー3案 |
 | [TONE.md](TONE.md) | トンマナ仕様。配色・画像の作法・ChatGPT用プロンプト |
 | [images/README.md](images/README.md) | 画像フォルダ内の案内（内容はこのページと同じ） |
 

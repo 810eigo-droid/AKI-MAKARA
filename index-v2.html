@@ -1,0 +1,1016 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>【改善版v2】しあわせ超開運メソッド｜あなたの魂の設計図を知る無料動画セミナー</title>
+<meta name="description" content="生まれた瞬間の星が示す「あなただけの魂の設計図」。才能・使命・飛躍のタイミングを読み解く無料動画セミナーを公式LINEでお届けします。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Noto+Sans+JP:wght@400;500;700;900&family=Cormorant+Garamond:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   しあわせ超開運メソッド LP  —  改善提案サンプル
+   Teach & Funnel Design
+   ============================================================ */
+
+:root{
+  --ink:#1B1233;
+  --ink-2:#2E2148;
+  --ink-3:#413060;
+  --paper:#FEFBFD;
+  --paper-2:#F7F0F7;
+  --text:#2C2438;
+  --muted:#6E6480;
+  --gold:#C0983F;
+  --gold-lt:#E4CE94;
+  --pink:#E39BC2;
+  --pink-lt:#F7DCEB;
+  --violet:#8B6BC7;
+  --line:rgba(139,107,199,.22);
+  --radius:18px;
+  --shadow:0 18px 50px -22px rgba(43,25,80,.38);
+  --serif:"Noto Serif JP",serif;
+  --sans:"Noto Sans JP",sans-serif;
+  --script:"Cormorant Garamond",serif;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  font-family:var(--sans);
+  color:var(--text);
+  background:var(--paper);
+  line-height:1.9;
+  font-size:16px;
+  letter-spacing:.02em;
+  overflow-x:hidden;
+}
+/* height:auto を必ず付ける。これが無いと、HTMLの height="..." 属性が
+   そのまま高さとして使われ、画像が縦に引き伸ばされる */
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+
+/* ============================================================
+   SAMPLE 透かし
+   ------------------------------------------------------------
+   本番公開時は <body class="is-sample"> の is-sample を消すだけで、
+   透かしと左上のDEMOバッジが両方まとめて消えます。
+   ============================================================ */
+.watermark,.demo-badge{display:none}
+body.is-sample .watermark,
+body.is-sample .demo-badge{display:block}
+
+.watermark{
+  position:fixed; inset:0; z-index:190;
+  pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27 width%3D%27360%27 height%3D%27280%27%3E%3Ctext x%3D%27110%27 y%3D%2780%27 font-family%3D%27Helvetica%2CArial%2Csans-serif%27 font-size%3D%2727%27 font-weight%3D%27700%27 letter-spacing%3D%275%27 text-anchor%3D%27middle%27 transform%3D%27rotate(-28 110 80)%27 stroke%3D%27%23ffffff%27 stroke-width%3D%273%27 stroke-opacity%3D%270.5%27 fill%3D%27%232f2f2f%27 paint-order%3D%27stroke%27%3ESAMPLE%3C%2Ftext%3E%3Ctext x%3D%27250%27 y%3D%27205%27 font-family%3D%27Helvetica%2CArial%2Csans-serif%27 font-size%3D%2723%27 font-weight%3D%27700%27 letter-spacing%3D%273%27 text-anchor%3D%27middle%27 transform%3D%27rotate(-28 250 205)%27 stroke%3D%27%23ffffff%27 stroke-width%3D%273%27 stroke-opacity%3D%270.5%27 fill%3D%27%232f2f2f%27 paint-order%3D%27stroke%27%3ETAFdesign%3C%2Ftext%3E%3C%2Fsvg%3E");
+  background-repeat:repeat;
+  background-size:300px 233px;
+  /* 濃いグレー＋白フチ。白カード上でも濃紫背景上でも同じように見える。
+     mix-blend-mode は position:fixed と併用するとChromiumで描画が崩れるため使わない。
+     ▼濃さの調整はこの opacity の数値だけを触ってください（0.10=極薄 / 0.30=はっきり） */
+  opacity:.17;
+}
+@media (max-width:600px){
+  .watermark{background-size:230px 179px;opacity:.15}
+}
+@media print{
+  .watermark{opacity:.3}
+}
+
+/* ---------- DEMO badge ---------- */
+.demo-badge{
+  position:fixed; top:0; left:0; z-index:200;
+  background:var(--ink); color:var(--gold-lt);
+  font-family:var(--sans); font-size:10px; font-weight:700;
+  letter-spacing:.14em; padding:6px 14px;
+  border-bottom-right-radius:10px;
+  box-shadow:0 6px 18px -8px rgba(0,0,0,.5);
+  pointer-events:none;
+}
+
+/* ---------- shared ---------- */
+.wrap{width:min(720px,calc(100% - 40px));margin-inline:auto}
+.wrap-w{width:min(1040px,calc(100% - 40px));margin-inline:auto}
+section{position:relative}
+.pad{padding:clamp(56px,9vw,96px) 0}
+
+.eyebrow{
+  font-family:var(--script); font-style:italic;
+  font-size:clamp(15px,3.6vw,19px); letter-spacing:.1em;
+  color:var(--gold); text-align:center; margin:0 0 6px;
+}
+.h2{
+  font-family:var(--serif); font-weight:900;
+  font-size:clamp(23px,5.6vw,34px); line-height:1.5;
+  text-align:center; margin:0 0 10px; color:var(--ink);
+  letter-spacing:.01em;
+}
+.h2 em{font-style:normal;color:var(--violet)}
+.h2-sub{
+  text-align:center;color:var(--muted);
+  font-size:clamp(13px,3.4vw,15px);margin:0 auto clamp(30px,6vw,46px);
+  max-width:34em;line-height:1.85;
+}
+.rule{
+  width:52px;height:1px;margin:0 auto 26px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+}
+
+/* ---------- reveal ---------- */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.3,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  .rv{opacity:1;transform:none;transition:none}
+  html{scroll-behavior:auto}
+}
+
+/* ---------- CTA button ---------- */
+.cta{
+  display:block;width:min(480px,100%);margin:0 auto;
+  text-decoration:none;text-align:center;
+  background:linear-gradient(135deg,#D9B25A 0%,#B98C34 55%,#D9B25A 100%);
+  color:#2A1D05;
+  border-radius:999px;
+  padding:19px 22px 17px;
+  font-weight:900;font-size:clamp(15px,3.9vw,18px);
+  letter-spacing:.02em;line-height:1.5;
+  box-shadow:0 14px 30px -12px rgba(160,120,30,.7),inset 0 1px 0 rgba(255,255,255,.55);
+  border:none;cursor:pointer;
+  position:relative;overflow:hidden;
+  transition:transform .25s ease,box-shadow .25s ease;
+}
+.cta:hover{transform:translateY(-2px);box-shadow:0 20px 38px -12px rgba(160,120,30,.8),inset 0 1px 0 rgba(255,255,255,.55)}
+.cta:active{transform:translateY(0)}
+.cta::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(105deg,transparent 30%,rgba(255,255,255,.55) 47%,transparent 62%);
+  transform:translateX(-120%);
+  animation:sheen 4.5s ease-in-out infinite;
+}
+@keyframes sheen{0%,72%{transform:translateX(-120%)}90%,100%{transform:translateX(120%)}}
+.cta .sm{display:block;font-size:11px;font-weight:700;opacity:.72;letter-spacing:.08em;margin-bottom:3px}
+.cta-note{
+  text-align:center;font-size:11.5px;color:var(--muted);
+  margin:12px auto 0;line-height:1.8;
+}
+.cta-note b{color:var(--violet);font-weight:700}
+.on-dark .cta-note{color:rgba(255,255,255,.62)}
+.on-dark .cta-note b{color:var(--gold-lt)}
+
+/* ============================================================
+   FV
+   ============================================================ */
+.fv{
+  position:relative;
+  /* 画像が読み込まれるまでの下地。画像の上端〜下端の色に合わせてある */
+  background:linear-gradient(175deg,#190F32 0%,#241748 34%,#3B2668 58%,#6A4A93 82%,#BE93BE 100%);
+  padding:0 0 44px;
+  overflow:hidden;
+  isolation:isolate;
+}
+/* PCなど画像より画面が広いとき、左右の余白を画像自身のぼかしで埋める。
+   引き伸ばさないので画質が落ちず、余白も違和感なく繋がる */
+.fv::before{
+  content:"";position:absolute;inset:0;z-index:-1;
+  background:url("images/fv.webp") center top/cover no-repeat;
+  filter:blur(48px) saturate(1.15);
+  transform:scale(1.2);
+  opacity:.9;
+}
+/* FV画像そのもの。スマホ幅では全幅、PCでは520pxで中央固定 */
+.fv-img{display:block;position:relative;width:100%;max-width:520px;margin:0 auto}
+.fv-img img{width:100%;height:auto;display:block}
+
+/* 画面には出さず、検索エンジンと読み上げにだけ渡すテキスト */
+.sr-only{
+  position:absolute;width:1px;height:1px;padding:0;margin:-1px;
+  overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;
+}
+.stars{position:absolute;inset:0;z-index:-1;opacity:.85}
+.stars::before,.stars::after{
+  content:"";position:absolute;inset:0;
+  background-image:
+    radial-gradient(1.6px 1.6px at 12% 18%,#fff,transparent),
+    radial-gradient(1.4px 1.4px at 82% 12%,#fff,transparent),
+    radial-gradient(1.8px 1.8px at 47% 30%,#FFF3D0,transparent),
+    radial-gradient(1.2px 1.2px at 24% 52%,#fff,transparent),
+    radial-gradient(1.5px 1.5px at 68% 44%,#fff,transparent),
+    radial-gradient(2px 2px at 90% 62%,#FFF3D0,transparent),
+    radial-gradient(1.3px 1.3px at 33% 74%,#fff,transparent),
+    radial-gradient(1.6px 1.6px at 58% 86%,#fff,transparent),
+    radial-gradient(1.2px 1.2px at 8% 88%,#fff,transparent);
+  animation:tw 4.5s ease-in-out infinite alternate;
+}
+.stars::after{transform:scale(1.35) rotate(12deg);opacity:.5;animation-delay:-2.2s}
+@keyframes tw{from{opacity:.35}to{opacity:1}}
+
+.fv-inner{text-align:center;color:#fff;position:relative}
+.fv-lead{
+  display:inline-block;
+  font-family:var(--serif);font-size:clamp(12px,3.3vw,14px);font-weight:500;
+  letter-spacing:.09em;color:#fff;
+  border-top:1px solid rgba(255,255,255,.4);
+  border-bottom:1px solid rgba(255,255,255,.4);
+  padding:7px 16px;margin:0 0 26px;
+  background:rgba(40,24,72,.22);
+}
+.fv-h1{
+  font-family:var(--serif);font-weight:900;
+  font-size:clamp(28px,7.6vw,50px);
+  line-height:1.44;margin:0 0 8px;
+  letter-spacing:.01em;
+  text-shadow:0 4px 26px rgba(30,15,60,.55),0 1px 2px rgba(30,15,60,.5);
+}
+.fv-h1 .gd{
+  background:linear-gradient(178deg,#FFFBEC 4%,#FFE9A4 30%,#E0B454 56%,#FFF2C6 80%,#E9C878 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 2px 4px rgba(12,6,28,.75)) drop-shadow(0 0 24px rgba(255,214,120,.35));
+}
+.fv-h1 .sm{display:block;font-size:.56em;font-weight:700;margin-top:12px;letter-spacing:.04em}
+.fv-sub{
+  font-size:clamp(13px,3.5vw,16px);line-height:1.95;
+  margin:20px auto 30px;max-width:26em;
+  color:rgba(255,255,255,.95);
+  text-shadow:0 2px 12px rgba(30,15,60,.6);
+}
+.fv-sub b{
+  color:#FFEFC0;font-weight:700;
+  border-bottom:1px dotted rgba(255,239,192,.6);
+}
+
+/* offer card */
+.offer{
+  background:rgba(255,255,255,.97);
+  color:var(--text);
+  border-radius:var(--radius);
+  padding:24px 20px 22px;
+  margin:18px auto 24px;
+  max-width:520px;
+  box-shadow:0 26px 60px -24px rgba(30,12,60,.75);
+  border:1px solid rgba(255,255,255,.8);
+  position:relative;
+}
+.offer-flag{
+  position:absolute;top:-13px;left:50%;transform:translateX(-50%);
+  background:linear-gradient(135deg,#C0983F,#8E6A1E);
+  color:#FFF6DC;font-size:11.5px;font-weight:900;letter-spacing:.16em;
+  padding:5px 20px;border-radius:999px;white-space:nowrap;
+  box-shadow:0 8px 20px -8px rgba(120,90,20,.9);
+}
+.offer h2{
+  font-family:var(--serif);font-weight:900;
+  font-size:clamp(19px,4.8vw,25px);line-height:1.5;
+  margin:8px 0 4px;color:var(--ink);text-align:center;
+}
+.offer h2 .free{color:#C0983F}
+.offer-note{
+  text-align:center;font-size:14px;color:var(--muted);margin:0 0 16px;
+}
+.offer-list{list-style:none;margin:0 0 18px;padding:0;text-align:left}
+.offer-list li{
+  display:flex;gap:10px;align-items:flex-start;
+  font-size:16px;line-height:1.75;padding:9px 4px;
+  border-bottom:1px dashed var(--line);
+}
+.offer-list li:last-child{border-bottom:none}
+.offer-list .ic{
+  flex:0 0 22px;height:22px;border-radius:50%;
+  background:linear-gradient(135deg,var(--violet),var(--pink));
+  color:#fff;font-size:11px;font-weight:900;
+  display:grid;place-items:center;margin-top:2px;
+}
+.offer-list b{font-weight:700;color:var(--ink)}
+
+.scroll-cue{
+  margin-top:30px;text-align:center;
+  font-family:var(--script);font-style:italic;
+  font-size:12px;letter-spacing:.2em;color:rgba(255,255,255,.75);
+}
+.scroll-cue span{
+  display:block;width:1px;height:38px;margin:8px auto 0;
+  background:linear-gradient(rgba(255,255,255,.75),transparent);
+  animation:cue 2s ease-in-out infinite;transform-origin:top;
+}
+@keyframes cue{0%,100%{transform:scaleY(.3);opacity:.4}50%{transform:scaleY(1);opacity:1}}
+
+/* ============================================================
+   PROBLEM  (共感チェック)
+   ============================================================ */
+/* 画像より画面が広いとき、左右の余白を画像自身のぼかしで埋めて
+   画像が宙に浮いて見えるのを防ぐ（FVと同じ手法） */
+.problem{
+  position:relative;overflow:hidden;
+  background:#F6EEF5;
+  padding-top:0;
+}
+.problem::before{
+  content:"";position:absolute;inset:0;z-index:0;
+  /* 画像の端から採った色。上端 #F6EEF5 → 下側 #EBDDF0 でつなぐ */
+  background:linear-gradient(180deg,#F6EEF5 0%,#F4EBF4 55%,#EBDDF0 100%);
+}
+.problem > *{position:relative;z-index:1}
+.problem .problem-close{margin-top:clamp(26px,5vw,38px)}
+/* 画像の width/height 属性は付けていない。付けると画像を差し替えたとき
+   比率がズレるため。高さは読み込んだ画像の比率から自動で決まる。
+
+   セクションまるごとを1枚の画像で見せるときの共通スタイル。
+   スマホでは画面いっぱい、PCでは760pxで中央。
+   画像自体に余白と装飾が含まれているので、角丸や影は付けない */
+.sect-img{
+  display:block;width:100%;height:auto;max-width:520px;
+  margin:0 auto;
+}
+
+.problem-close{
+  text-align:center;margin:32px auto 0;max-width:30em;
+  font-family:var(--serif);font-size:clamp(15px,4vw,19px);
+  font-weight:700;line-height:1.85;color:var(--ink);
+}
+.problem-close mark{
+  background:linear-gradient(transparent 62%,var(--pink-lt) 62%);
+  color:inherit;padding:0 2px;
+}
+
+/* ============================================================
+   STORY  (魂の設計図とは)
+   ============================================================ */
+.story{
+  background:
+    radial-gradient(700px 420px at 88% 4%,rgba(247,220,235,.9),transparent 62%),
+    radial-gradient(620px 480px at 4% 92%,rgba(226,214,244,.85),transparent 62%),
+    var(--paper);
+}
+.sblock{
+  background:#fff;border-radius:var(--radius);
+  padding:clamp(24px,5.4vw,36px);
+  margin-bottom:18px;box-shadow:var(--shadow);
+  border:1px solid rgba(139,107,199,.13);
+  position:relative;
+}
+.sblock .num{
+  font-family:var(--script);font-style:italic;
+  font-size:40px;line-height:1;color:var(--gold-lt);
+  position:absolute;top:16px;right:22px;
+}
+.sblock h3{
+  font-family:var(--serif);font-weight:900;
+  font-size:clamp(17px,4.4vw,22px);line-height:1.6;
+  margin:0 0 14px;color:var(--ink);padding-right:44px;
+}
+.sblock p{margin:0 0 14px;font-size:14.5px;line-height:2}
+.sblock p:last-child{margin-bottom:0}
+.sblock strong{
+  font-weight:700;color:var(--ink);
+  background:linear-gradient(transparent 64%,rgba(227,155,194,.42) 64%);
+}
+.qlist{
+  list-style:none;margin:16px 0 0;padding:18px 20px;
+  background:linear-gradient(135deg,rgba(247,240,247,.9),rgba(247,220,235,.5));
+  border-radius:12px;border-left:3px solid var(--gold);
+}
+.qlist li{
+  font-family:var(--serif);font-weight:700;
+  font-size:15px;line-height:1.75;padding:5px 0;color:var(--ink-2);
+}
+.qlist li::before{content:"—　";color:var(--gold)}
+
+/* ============================================================
+   GIFTS
+   ============================================================ */
+.gifts{background:var(--ink);color:#fff;overflow:hidden}
+.gifts::before{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(700px 400px at 82% 8%,rgba(139,107,199,.5),transparent 62%),
+    radial-gradient(620px 400px at 8% 92%,rgba(227,155,194,.32),transparent 62%);
+}
+.gifts>*{position:relative}
+.gifts .h2{color:#fff}
+.gifts .h2 em{color:var(--gold-lt)}
+.gifts .h2-sub{color:rgba(255,255,255,.66)}
+/* 特典カードは画像1枚がカード全体。文字も画像に含まれているため、
+   HTML側にはテキストを置かない（検索エンジン用に .sr-only で保持）。
+   画像を差し替えるだけで内容が変わる。 */
+.gift-grid{display:grid;gap:18px;width:100%}
+/* 特典セクションだけ、カードを少しでも大きく見せるため横幅を広く取る */
+.wrap-gift{width:min(1180px,calc(100% - 28px));margin-inline:auto}
+.giftcard{
+  display:block;border-radius:14px;overflow:hidden;
+  box-shadow:0 22px 50px -24px rgba(0,0,0,.75);
+  transition:transform .3s ease,box-shadow .3s ease;
+}
+.giftcard img{width:100%;height:auto;display:block}
+.giftcard:hover{
+  transform:translateY(-5px);
+  box-shadow:0 30px 60px -22px rgba(0,0,0,.85);
+}
+.gifts .value{
+  margin-top:26px;text-align:center;
+  font-family:var(--serif);font-size:clamp(15px,4vw,19px);font-weight:700;
+  color:#fff;
+}
+.gifts .value s{color:rgba(255,255,255,.45);font-weight:400}
+.gifts .value b{color:var(--gold-lt);font-size:1.25em}
+
+/* ============================================================
+   PROFILE
+   ============================================================ */
+.profile{background:var(--paper-2)}
+.pf{
+  background:#fff;border-radius:var(--radius);
+  box-shadow:var(--shadow);overflow:hidden;
+  border:1px solid rgba(139,107,199,.13);
+}
+/* 下に続く profile.webp の上端の色（#877CC0前後）に合わせてあるので、
+   画像との境目が出ない。画像を差し替えて色が変わったら、
+   下の linear-gradient の終点を画像の上端の色に合わせ直すこと */
+.pf-top{
+  display:grid;grid-template-columns:118px 1fr;gap:20px;align-items:center;
+  padding:26px 24px 30px;
+  background:linear-gradient(180deg,#6B5CA2 0%,#7C6DB4 55%,#8B7CC2 100%);
+}
+.pf-photo{
+  aspect-ratio:1;border-radius:50%;
+  background:radial-gradient(circle at 42% 30%,#FFF0F7,#E3B9D3 55%,#A87CA3);
+  display:grid;place-items:center;
+  box-shadow:0 12px 30px -14px rgba(90,50,110,.6),0 0 0 5px #fff,0 0 0 6px var(--gold-lt);
+  font-family:var(--script);font-style:italic;font-size:34px;color:#fff;
+  text-shadow:0 2px 8px rgba(90,50,110,.4);
+  overflow:hidden;
+}
+.pf-photo img{width:100%;height:100%;object-fit:cover;border-radius:50%}
+.pf-name{font-family:var(--serif);font-weight:900;font-size:26px;margin:0;color:#fff;line-height:1.4;text-shadow:0 2px 10px rgba(40,25,80,.4)}
+.pf-en{font-family:var(--script);font-style:italic;font-size:17px;color:var(--gold-lt);letter-spacing:.12em;margin:2px 0 8px}
+.pf-role{font-size:15px;color:rgba(255,255,255,.82);line-height:1.7;margin:0}
+.pf-img{display:block;width:100%;height:auto}
+
+/* スマホでは写真を上に置いて横幅をフルに使う。
+   「スピリチュアルヒーリングサロン主宰」が単語の途中で折り返されるのを防ぐ */
+@media (max-width:520px){
+  .pf-top{
+    grid-template-columns:1fr;justify-items:center;text-align:center;
+    gap:14px;padding:26px 18px 30px;
+  }
+  .pf-photo{width:124px}
+}
+
+
+/* PCでの画像の幅を全セクションで揃える。
+   画像はすべてスマホ用（縦長）に作られているので、横に広げるほど
+   画像内の文字だけが大きくなり、HTML側の文字と不揃いになる。
+   FV・お悩み・プロフィールを同じ520pxの列幅に統一する */
+@media (min-width:820px){
+  .pf{width:min(520px,100%);margin-inline:auto}
+}
+
+/* ============================================================
+   VOICE
+   ============================================================ */
+.voice-grid{display:grid;gap:16px}
+.vc{
+  background:#fff;border-radius:var(--radius);padding:24px 22px;
+  box-shadow:var(--shadow);border:1px solid rgba(139,107,199,.13);
+  position:relative;
+}
+.vc::before{
+  content:"“";position:absolute;top:2px;right:18px;
+  font-family:var(--script);font-size:64px;color:var(--pink-lt);line-height:1;
+}
+/* 顔アイコン＋星＋属性の並び。画像は images/voice-0N.webp を差し替えるだけ */
+.vc-head{
+  display:flex;align-items:center;gap:13px;
+  margin-bottom:14px;position:relative;
+}
+.vc-face{
+  flex:0 0 58px;width:58px;height:58px;
+  border-radius:50%;object-fit:cover;
+  background:linear-gradient(140deg,#F7DCEB,#C9AEDB);
+  box-shadow:0 0 0 3px #fff,0 0 0 4px var(--pink-lt),0 10px 20px -12px rgba(90,50,110,.65);
+}
+.vc-stars{color:var(--gold);font-size:13px;letter-spacing:.22em;margin:0}
+.vc h4{
+  font-family:var(--serif);font-weight:900;font-size:16px;line-height:1.6;
+  margin:0 0 10px;color:var(--ink);position:relative;
+}
+.vc p{margin:0 0 14px;font-size:13.5px;line-height:1.95;color:var(--text)}
+.vc .who{
+  font-size:12px;color:var(--muted);text-align:left;
+  margin:3px 0 0;font-weight:500;
+}
+
+/* ============================================================
+   STEPS
+   ============================================================ */
+.steps{background:var(--paper-2)}
+.step-grid{display:grid;gap:14px;max-width:600px;margin-inline:auto}
+.st{
+  background:#fff;border-radius:14px;padding:20px 20px 20px 68px;
+  position:relative;box-shadow:0 8px 22px -14px rgba(60,35,110,.45);
+  border:1px solid rgba(139,107,199,.14);
+}
+.st .no{
+  position:absolute;left:18px;top:19px;
+  width:34px;height:34px;border-radius:50%;
+  background:linear-gradient(135deg,var(--violet),#5F44A0);
+  color:#fff;font-family:var(--script);font-style:italic;
+  font-size:19px;display:grid;place-items:center;
+  box-shadow:0 8px 18px -8px rgba(95,68,160,.9);
+}
+.st h4{font-family:var(--serif);font-weight:900;font-size:16px;margin:0 0 5px;color:var(--ink)}
+.st p{margin:0;font-size:13.5px;line-height:1.8;color:var(--muted)}
+
+/* ============================================================
+   FAQ
+   ============================================================ */
+.faq-list{max-width:640px;margin-inline:auto}
+.fq{
+  background:#fff;border-radius:14px;margin-bottom:11px;
+  border:1px solid rgba(139,107,199,.16);overflow:hidden;
+  box-shadow:0 6px 18px -14px rgba(60,35,110,.4);
+}
+.fq summary{
+  list-style:none;cursor:pointer;
+  padding:17px 48px 17px 50px;position:relative;
+  font-family:var(--serif);font-weight:700;font-size:14.5px;line-height:1.7;
+  color:var(--ink);
+}
+.fq summary::-webkit-details-marker{display:none}
+.fq summary::before{
+  content:"Q";position:absolute;left:18px;top:16px;
+  font-family:var(--script);font-style:italic;font-size:19px;color:var(--gold);
+}
+.fq summary::after{
+  content:"";position:absolute;right:20px;top:24px;
+  width:9px;height:9px;
+  border-right:2px solid var(--violet);border-bottom:2px solid var(--violet);
+  transform:rotate(45deg);transition:transform .3s ease;
+}
+.fq[open] summary::after{transform:rotate(-135deg);top:28px}
+.fq .a{
+  padding:0 22px 20px 50px;font-size:13.5px;line-height:1.95;color:var(--muted);
+  position:relative;
+}
+.fq .a::before{
+  content:"A";position:absolute;left:18px;top:-2px;
+  font-family:var(--script);font-style:italic;font-size:19px;color:var(--pink);
+}
+
+/* ============================================================
+   CLOSING
+   ============================================================ */
+.closing{
+  background:
+    radial-gradient(900px 560px at 82% 6%,rgba(227,155,194,.5),transparent 62%),
+    radial-gradient(760px 520px at 6% 88%,rgba(139,107,199,.5),transparent 62%),
+    linear-gradient(170deg,#221641,#3E2A66 55%,#6B4C95);
+  color:#fff;overflow:hidden;
+}
+.closing .h2{color:#fff}
+.closing .h2 em{color:var(--gold-lt)}
+/* 画像の下に「今すぐ受け取れるもの」カードとCTAが続く */
+.closing .sect-img{margin-bottom:clamp(26px,5vw,36px)}
+.cl-msg{
+  text-align:center;max-width:30em;margin:0 auto clamp(28px,6vw,40px);
+  font-size:14.5px;line-height:2.05;color:rgba(255,255,255,.86);
+}
+.cl-msg b{color:#FFEFC0;font-weight:700}
+.recap{
+  max-width:480px;margin:0 auto 26px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:var(--radius);padding:20px 22px;
+}
+.recap h4{
+  font-family:var(--serif);font-size:14px;font-weight:900;
+  margin:0 0 12px;text-align:center;color:var(--gold-lt);letter-spacing:.08em;
+}
+.recap ul{list-style:none;margin:0;padding:0}
+.recap li{
+  font-size:13.5px;line-height:1.75;padding:7px 0 7px 26px;position:relative;
+  color:rgba(255,255,255,.9);
+  border-bottom:1px dashed rgba(255,255,255,.14);
+}
+.recap li:last-child{border-bottom:none}
+.recap li::before{
+  content:"";position:absolute;left:4px;top:14px;
+  width:5px;height:9px;
+  border-right:2px solid var(--gold-lt);border-bottom:2px solid var(--gold-lt);
+  transform:rotate(42deg);
+}
+
+/* ---------- footer ---------- */
+footer{
+  background:var(--ink);color:rgba(255,255,255,.5);
+  text-align:center;padding:30px 20px calc(30px + env(safe-area-inset-bottom));
+  font-size:11.5px;line-height:2;
+}
+footer a{color:rgba(255,255,255,.72);text-decoration:none;margin:0 9px}
+footer .cr{font-family:var(--script);font-style:italic;letter-spacing:.1em;margin-top:10px;opacity:.7}
+
+/* ---------- sticky CTA ---------- */
+.sticky{
+  position:fixed;left:0;right:0;bottom:0;z-index:150;
+  padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+  background:rgba(27,18,51,.93);
+  backdrop-filter:blur(12px);
+  border-top:1px solid rgba(255,255,255,.14);
+  transform:translateY(120%);transition:transform .4s cubic-bezier(.2,.7,.3,1);
+}
+.sticky.show{transform:none}
+.sticky .cta{padding:14px 16px 12px;font-size:14.5px;width:100%;max-width:520px}
+.sticky .cta .sm{font-size:10px;margin-bottom:1px}
+
+/* ============================================================
+   Desktop
+   ============================================================ */
+@media (min-width:820px){
+  body{font-size:16.5px}
+  .fv{padding:0 0 56px}
+  .offer{max-width:520px;padding:22px 30px 20px}
+  .offer-list li{font-size:16.5px;padding:9px 4px}
+  .scroll-cue{margin-top:20px}
+  .scroll-cue span{height:26px}
+  .gift-grid{grid-template-columns:repeat(3,1fr);gap:22px}
+  .voice-grid{grid-template-columns:repeat(3,1fr)}
+  .step-grid{grid-template-columns:repeat(3,1fr);max-width:none}
+  .st{padding:24px 20px 22px;text-align:center}
+  .st .no{position:static;margin:0 auto 12px}
+  .sticky{display:none}
+  .check{max-width:640px}
+  .check li{font-size:15.5px}
+}
+@media (max-width:380px){
+}
+
+/* ===== v2 追加分 ===== */
+.gift-item{display:flex;flex-direction:column;gap:10px}
+.gift-cap{margin:0 4px;font-size:13.5px;line-height:1.75;color:rgba(255,255,255,.85)}
+.gift-cap b{color:var(--gold-lt);font-weight:700}
+.value-note{margin-top:8px;text-align:center;font-size:12.5px;color:rgba(255,255,255,.55)}
+.closing-push{
+  margin:26px auto 6px;text-align:center;
+  font-family:var(--serif);font-size:clamp(16px,4.4vw,20px);font-weight:700;line-height:2;
+  color:#fff;
+}
+.closing-push em{font-style:normal;color:var(--gold-lt)}
+</style>
+</head>
+<!-- ============================================================
+     本番公開時は、下の <body> から  class="is-sample"  を削除してください。
+     それだけでSAMPLE透かしと左上のDEMOバッジが両方消えます。
+     ============================================================ -->
+<body class="is-sample">
+
+<div class="watermark" aria-hidden="true"></div>
+<div class="demo-badge">SAMPLE 改善版 v2 / Teach &amp; Funnel Design　※無断使用禁止</div>
+
+<!-- ==================== FV ==================== -->
+<!-- FV画像を差し替えるときは images/fv.webp を上書きするだけ。
+     画像内の文字は検索エンジンに読まれないため、同じ内容を下の h1 に持たせている（画面上は非表示） -->
+<section class="fv">
+  <h1 class="sr-only">星々が教えてくれる、あなたの魂の設計図 — 才能・使命・飛躍のタイミングを読み解く「しあわせ超開運メソッド」無料動画セミナー（参加費0円）</h1>
+
+  <a class="fv-img" href="#entry" aria-label="LINEで無料セミナーを受け取る">
+    <img src="images/fv.webp" alt="" fetchpriority="high" decoding="async">
+  </a>
+
+  <div class="wrap fv-inner">
+
+    <div class="offer">
+      <h2>しあわせ超開運メソッド<br><span class="free">無料動画セミナー</span></h2>
+      <p class="offer-note">ご登録いただいた<b>その場で</b>、最初の動画と特典が届きます</p>
+
+      <ul class="offer-list">
+        <li><span class="ic">▶</span><span><b>全3回の動画セミナー</b>／各15分・スマホ視聴可。<br>観終わる頃には「自分はどこへ向かえばいいのか」の判断軸が手に入ります</span></li>
+        <li><span class="ic">1</span><span><b>特典1</b>／星が知らせる、あなたの魂の傾向シート</span></li>
+        <li><span class="ic">2</span><span><b>特典2</b>／願いが叶うまでのロードマップ</span></li>
+        <li><span class="ic">3</span><span><b>特典3</b>／観るだけで整う、開運ヒーリング動画</span></li>
+      </ul>
+
+      <a class="cta" href="#entry">
+        <span class="sm">＼ 30秒で完了 ／</span>
+        LINEで無料セミナーを受け取る
+      </a>
+      <p class="cta-note">
+        ※ 費用は一切かかりません／<b>いつでもブロック可能</b>です
+      </p>
+    </div>
+
+    <p class="scroll-cue">Scroll<span></span></p>
+  </div>
+</section>
+
+<!-- ==================== PROBLEM ==================== -->
+<!-- 見出し＋チェックリストは images/check.webp に含まれる。
+     締めの一文だけはHTMLに残してある（あとから差し替えやすいように） -->
+<section class="problem pad">
+  <h2 class="sr-only">こんなお悩み、ありませんか？ ／ 努力しているのに、なぜか空回りしてしまう ／ 自分の本当にやりたいことが、よく分からない ／ 「私の使命って何だろう」と考えることがある ／ 環境を変えても、同じパターンを繰り返してしまう ／ 占いは好きだけど、その先の行動につながらない ／ 今が動くべき時なのか、待つべき時なのか迷っている</h2>
+
+  <img class="sect-img rv" src="images/check.webp"
+       alt="こんなお悩み、ありませんか？ 努力しているのに空回りしてしまう／やりたいことが分からない／自分の使命を考えることがある／環境を変えても同じパターンを繰り返す／占いが行動につながらない／動くべき時か待つべき時か迷っている" loading="lazy" decoding="async">
+
+  <div class="wrap">
+    <p class="problem-close rv">
+      ひとつでも当てはまったなら、<br>
+      それは能力の問題ではなく<br>
+      <mark>「設計図を知らないまま走っている」</mark>だけかもしれません。<br><br>
+      逆に言えば——設計図を知ったその日から、<br>
+      同じ努力が<mark>「実る努力」</mark>に変わり始めます。
+    </p>
+  </div>
+</section>
+
+<!-- ==================== STORY ==================== -->
+<section class="story pad">
+  <div class="wrap">
+    <p class="eyebrow rv">Why</p>
+    <h2 class="h2 rv">なぜ「魂の設計図」を<br><em>知る必要があるのか</em></h2>
+    <div class="rule rv"></div>
+
+    <div class="sblock rv">
+      <span class="num">01</span>
+      <h3>先の見えない時代に、<br>頼れるのは「自分の軸」だけ</h3>
+      <p>時代がどう変わっても、どんな困難が訪れても、揺らがないものがあります。それは<strong>自分自身の設計図を知っている</strong>ということ。</p>
+      <p>夢や情熱だけでは、道は拓けません。自分に何が備わっていて、どこへ向かうべきなのか。その地図を持っているかどうかで、同じ努力の結果はまったく変わってきます。</p>
+    </div>
+
+    <div class="sblock rv">
+      <span class="num">02</span>
+      <h3>星は、あなたが生まれた瞬間の<br>すべてを記録している</h3>
+      <p>生まれた日、時間、場所。その瞬間の空の配置は、二度と同じものが訪れません。だからこそそこには、<strong>あなただけの情報</strong>が刻まれています。</p>
+      <ul class="qlist">
+        <li>あなたの魂の特性は？</li>
+        <li>あなたに与えられた才能と使命は？</li>
+        <li>大きく飛躍するきっかけと、その時期は？</li>
+      </ul>
+    </div>
+
+    <div class="sblock rv">
+      <span class="num">03</span>
+      <h3>知ったあとに、<br>「どう動くか」までをお伝えします</h3>
+      <p>設計図を読み解くだけでは、人生は変わりません。大切なのは、<strong>読み解いた先の一歩</strong>です。</p>
+      <p>無料動画セミナーでは、次の順でお伝えしていきます。</p>
+      <ul class="qlist">
+        <li><strong>第1回</strong>：魂の設計図とは何か — 星に刻まれた、あなただけの情報</li>
+        <li><strong>第2回</strong>：設計図の読み解き方 — 才能・使命・飛躍のタイミング</li>
+        <li><strong>第3回</strong>：しあわせ超開運メソッド — 理想の未来へ動き出す手順</li>
+      </ul>
+      <p>3本すべて観終えたとき、「自分の設計図をどう活かすか」が言葉にできるようになっているはずです。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== GIFTS ==================== -->
+<section class="gifts pad">
+  <div class="wrap-gift">
+    <p class="eyebrow rv">Gift</p>
+    <h2 class="h2 rv">ご登録後、すぐに届く<em>3つの特典</em></h2>
+    <p class="h2-sub rv">公式LINEにご登録いただいた瞬間、無料動画セミナーとあわせてお受け取りいただけます。</p>
+
+    <div class="gift-grid">
+      <div class="gift-item rv">
+        <a class="giftcard" href="#entry">
+          <img src="images/gift-01.webp" alt="特典1／星が知らせる、あなたの魂の傾向シート" loading="lazy" decoding="async">
+        </a>
+        <p class="gift-cap"><b>自分の「取扱説明書」が、一枚に。</b><br>生まれ持った強みと、つまずきやすいポイントが整理されます。向いていない努力に時間を使うのは、今日で終わりに。</p>
+      </div>
+
+      <div class="gift-item rv">
+        <a class="giftcard" href="#entry">
+          <img src="images/gift-02.webp" alt="特典2／あなたの願いが叶うまでのロードマップ" loading="lazy" decoding="async">
+        </a>
+        <p class="gift-cap"><b>願いが「予定」に変わる。</b><br>いつ・何から動くかを時系列で可視化。漠然としていた想いが、今日からの行動に落ちていきます。</p>
+      </div>
+
+      <div class="gift-item rv">
+        <a class="giftcard" href="#entry">
+          <img src="images/gift-03.webp" alt="特典3／観るだけで整う、開運ヒーリング動画" loading="lazy" decoding="async">
+        </a>
+        <p class="gift-cap"><b>がんばらなくていい、1日3分。</b><br>眺めるだけで心がやさしく整う動画です。疲れた夜ほど、効きます。</p>
+      </div>
+    </div>
+
+    <p class="value rv"><s>通常 12,800円相当</s>　→　今だけ <b>すべて無料</b></p>
+    <p class="value-note rv">※ 無料でのご提供は、予告なく終了する場合があります</p>
+  </div>
+</section>
+
+<!-- ==================== PROFILE ==================== -->
+<section class="profile pad">
+  <div class="wrap">
+    <p class="eyebrow rv">Profile</p>
+    <h2 class="h2 rv">お届けするのは、<em>こんな人です</em></h2>
+    <div class="rule rv"></div>
+
+    <div class="pf rv">
+      <div class="pf-top">
+        <div class="pf-photo"><img src="images/aki.webp" alt="真果楽アキ" width="1254" height="1254" loading="lazy" decoding="async"></div>
+        <div>
+          <h3 class="pf-name">真果楽 アキ</h3>
+          <p class="pf-en">AKI MAKARA</p>
+          <p class="pf-role">スピリチュアルヒーリングサロン主宰<br>／ 魂の設計図リーダー</p>
+        </div>
+      </div>
+      <!-- 実績数値と本文は images/profile.webp に含まれる -->
+      <!-- 比率をHTMLで固定していないので、横長・縦長どちらの画像でもそのまま表示される -->
+      <img class="pf-img" src="images/profile.webp"
+           alt="鑑定実績1,200名以上、活動年数12年、満足度96%。星々が伝える「魂の設計図」を読み解き、その人が本来の姿で生きるためのサポートを行っています。"
+           loading="lazy" decoding="async">
+    </div>
+  </div>
+</section>
+
+<!-- ==================== VOICE ==================== -->
+<section class="pad">
+  <div class="wrap-w">
+    <p class="eyebrow rv">Voice</p>
+    <h2 class="h2 rv">受け取った方からの<em>お声</em></h2>
+    <div class="rule rv"></div>
+
+    <div class="voice-grid">
+      <div class="vc rv">
+        <div class="vc-head">
+          <img class="vc-face" src="images/voice-01.webp" alt="" width="500" height="500" loading="lazy" decoding="async">
+          <div>
+            <p class="vc-stars">★★★★★</p>
+            <p class="who">40代・女性・会社員</p>
+          </div>
+        </div>
+        <h4>自分を責めなくなりました</h4>
+        <p>うまくいかないのは努力が足りないからだと思っていました。設計図を知って、ただ向いていない方向に力を入れていただけだと気づけたんです。</p>
+      </div>
+      <div class="vc rv">
+        <div class="vc-head">
+          <img class="vc-face" src="images/voice-02.webp" alt="" width="500" height="500" loading="lazy" decoding="async">
+          <div>
+            <p class="vc-stars">★★★★★</p>
+            <p class="who">30代・男性・自営業</p>
+          </div>
+        </div>
+        <h4>動くべき時期が分かった</h4>
+        <p>今後の事業展開についてずっと迷っていましたが、「今がその時期」と背中を押してもらえたことで、新しいステージへ踏み切ることができました。ベストなタイミングで決断できたことが一番の収穫です。</p>
+      </div>
+      <div class="vc rv">
+        <div class="vc-head">
+          <img class="vc-face" src="images/voice-03.webp" alt="" width="500" height="500" loading="lazy" decoding="async">
+          <div>
+            <p class="vc-stars">★★★★★</p>
+            <p class="who">50代・女性・主婦</p>
+          </div>
+        </div>
+        <h4>動画が分かりやすかった</h4>
+        <p>難しい用語がなく、はじめてでもすんなり入ってきました。無料でここまで教えてくださるとは思っていませんでした。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== STEPS ==================== -->
+<section class="steps pad" id="entry">
+  <div class="wrap-w">
+    <p class="eyebrow rv">How to</p>
+    <h2 class="h2 rv">ご参加は、<em>3ステップ</em></h2>
+    <p class="h2-sub rv">お手続きは30秒ほどで完了します。費用は一切かかりません。</p>
+
+    <div class="step-grid">
+      <div class="st rv">
+        <div class="no">1</div>
+        <h4>ボタンをタップ</h4>
+        <p>下のボタンから公式LINEの友だち追加画面へ進みます。</p>
+      </div>
+      <div class="st rv">
+        <div class="no">2</div>
+        <h4>友だち追加</h4>
+        <p>「追加」を押すだけ。入力フォームはありません。</p>
+      </div>
+      <div class="st rv">
+        <div class="no">3</div>
+        <h4>すぐに受け取る</h4>
+        <p>動画セミナーと3つの特典が、その場で届きます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FAQ ==================== -->
+<section class="pad">
+  <div class="wrap">
+    <p class="eyebrow rv">FAQ</p>
+    <h2 class="h2 rv">よくあるご質問</h2>
+    <div class="rule rv"></div>
+
+    <div class="faq-list">
+      <details class="fq rv">
+        <summary>本当に無料ですか？あとから請求されませんか？</summary>
+        <div class="a">はい、動画セミナーと3つの特典はすべて無料です。ご登録によって費用が発生することは一切ありません。有料のサービスをご案内する場合も、必ず内容と金額を明示したうえでご検討いただく形をとっています。</div>
+      </details>
+      <details class="fq rv">
+        <summary>スピリチュアルは初めてなのですが、大丈夫でしょうか？</summary>
+        <div class="a">まったく問題ありません。専門用語は使わず、はじめての方に分かるようにお話ししています。むしろ「気になってはいたけれど、踏み出せずにいた」という方にこそ受け取っていただきたい内容です。</div>
+      </details>
+      <details class="fq rv">
+        <summary>生年月日以外に、必要な情報はありますか？</summary>
+        <div class="a">より詳しく読み解く際には、生まれた時間と場所をうかがうことがあります。分からない場合でもお伝えできることはたくさんありますので、ご安心ください。</div>
+      </details>
+      <details class="fq rv">
+        <summary>LINEに登録すると、通知がたくさん来ますか？</summary>
+        <div class="a">配信は必要な範囲にとどめています。通知をオフにしていただくことも、ブロックしていただくことも、いつでも自由です。個人情報を第三者に渡すことは一切ありません。</div>
+      </details>
+      <details class="fq rv">
+        <summary>忙しくて、動画を観る時間がとれるか不安です。</summary>
+        <div class="a">1本あたり15分程度、スマホで視聴できます。配信期限はありませんので、ご自身のペースで、通勤中や寝る前などの隙間時間にご覧ください。</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CLOSING ==================== -->
+<section class="closing pad on-dark">
+  <div class="wrap">
+    <h2 class="sr-only">その一歩を、今日から。設計図を知らないまま走り続けるのか。それとも、自分の地図を手にして進むのか。違いが生まれるのは、いつも小さな一歩からです。あなたが本来の姿で輝く未来を、心よりお待ちしています。</h2>
+
+    <img class="sect-img rv" src="images/closing.webp"
+         alt="その一歩を、今日から。設計図を知らないまま走り続けるのか。それとも、自分の地図を手にして進むのか。"
+         loading="lazy" decoding="async">
+
+    <div class="recap rv">
+      <h4>― 今すぐ受け取れるもの ―</h4>
+      <ul>
+        <li>しあわせ超開運メソッド 無料動画セミナー（全3回）</li>
+        <li>特典1／星が知らせる、あなたの魂の傾向シート</li>
+        <li>特典2／あなたの願いが叶うまでのロードマップ</li>
+        <li>特典3／観るだけで整う、開運ヒーリング動画</li>
+      </ul>
+    </div>
+
+    <p class="closing-push rv">この設計図は、生まれたときからずっと<br>あなたの中にあります。<br>あとは<em>「読み方」</em>を知るだけです。</p>
+
+    <a class="cta rv" href="#entry">
+      <span class="sm">＼ 参加費0円・30秒で完了 ／</span>
+      LINEで無料セミナーを受け取る
+    </a>
+    <p class="cta-note rv">※ 費用は一切かかりません／<b>いつでもブロック可能</b>です</p>
+  </div>
+</section>
+
+<footer>
+  <div>
+    <a href="#">運営者情報</a>
+    <a href="#">プライバシーポリシー</a>
+    <a href="#">お問い合わせ</a>
+  </div>
+  <p class="cr">Copyright © AKI MAKARA. All rights reserved.</p>
+</footer>
+
+<!-- ==================== STICKY CTA ==================== -->
+<div class="sticky" id="sticky">
+  <a class="cta" href="#entry">
+    <span class="sm">＼ 参加費0円 ／</span>
+    LINEで無料セミナーを受け取る
+  </a>
+</div>
+
+<script>
+// scroll reveal
+(function(){
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  },{rootMargin:'0px 0px -12% 0px',threshold:.08});
+  document.querySelectorAll('.rv').forEach(function(el,i){
+    el.style.transitionDelay = (i % 4) * 70 + 'ms';
+    io.observe(el);
+  });
+})();
+
+// sticky CTA: FVを抜けたら出す / フッター手前で引っ込める
+(function(){
+  var sticky = document.getElementById('sticky');
+  var fv = document.querySelector('.fv');
+  var closing = document.querySelector('.closing');
+  function update(){
+    var passedFv = window.scrollY > fv.offsetHeight * .85;
+    var atClosing = closing.getBoundingClientRect().top < window.innerHeight * .9;
+    sticky.classList.toggle('show', passedFv && !atClosing);
+  }
+  window.addEventListener('scroll', update, {passive:true});
+  window.addEventListener('resize', update);
+  update();
+})();
+
+// FAQ: 1つ開いたら他を閉じる
+(function(){
+  var all = document.querySelectorAll('.fq');
+  all.forEach(function(d){
+    d.addEventListener('toggle', function(){
+      if(d.open){ all.forEach(function(o){ if(o!==d) o.open = false; }); }
+    });
+  });
+})();
+</script>
+</body>
+</html>
