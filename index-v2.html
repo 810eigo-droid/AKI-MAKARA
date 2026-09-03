@@ -649,8 +649,8 @@ footer .cr{font-family:var(--script);font-style:italic;letter-spacing:.1em;margi
 /* PC用FV：900px以上では横長画像を幅いっぱい（上限1600px）で表示する */
 @media (min-width:900px){
   .fv .fv-img{max-width:1600px}
-  /* お悩みセクション：PCでは特典セクションと同じ横幅（1180px）まで広げる */
-  .problem .sect-img{max-width:min(1180px,calc(100% - 28px))}
+  /* お悩みセクション：PCでは760pxまで。1180pxは文字が大きくなりすぎた */
+  .problem .sect-img{max-width:760px}
 }
 .fv-img picture{display:block}
 
