@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>【仮】魂の設計図 パーソナルセッションのご案内</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Noto+Sans+JP:wght@400;500;700;900&family=Cormorant+Garamond:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1B1233; --ink-2:#2E2148; --ink-3:#413060;
+  --text:#2C2438; --gold:#C0983F; --gold-lt:#E4CE94;
+  --pink:#E39BC2; --pink-lt:#F7DCEB; --violet:#8B6BC7;
+  --serif:'Noto Serif JP',serif; --sans:'Noto Sans JP',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+img{max-width:100%;height:auto;display:block}
+body{font-family:var(--sans);color:var(--text);background:#FDFBF7;line-height:2;font-size:15.5px;-webkit-font-smoothing:antialiased}
+.watermark,.demo-badge{display:none}
+body.is-sample .watermark{display:block}
+body.is-sample .demo-badge{display:block}
+.watermark{
+  position:fixed; inset:0; z-index:190;
+  pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27 width%3D%27360%27 height%3D%27280%27%3E%3Ctext x%3D%27110%27 y%3D%2780%27 font-family%3D%27Helvetica%2CArial%2Csans-serif%27 font-size%3D%2727%27 font-weight%3D%27700%27 letter-spacing%3D%275%27 text-anchor%3D%27middle%27 transform%3D%27rotate(-28 110 80)%27 stroke%3D%27%23ffffff%27 stroke-width%3D%273%27 stroke-opacity%3D%270.5%27 fill%3D%27%232f2f2f%27 paint-order%3D%27stroke%27%3ESAMPLE%3C%2Ftext%3E%3Ctext x%3D%27250%27 y%3D%27205%27 font-family%3D%27Helvetica%2CArial%2Csans-serif%27 font-size%3D%2723%27 font-weight%3D%27700%27 letter-spacing%3D%273%27 text-anchor%3D%27middle%27 transform%3D%27rotate(-28 250 205)%27 stroke%3D%27%23ffffff%27 stroke-width%3D%273%27 stroke-opacity%3D%270.5%27 fill%3D%27%232f2f2f%27 paint-order%3D%27stroke%27%3ETAFdesign%3C%2Ftext%3E%3C%2Fsvg%3E");
+  background-repeat:repeat;
+  background-size:300px 233px;
+  /* 濃いグレー＋白フチ。白カード上でも濃紫背景上でも同じように見える。
+     mix-blend-mode は position:fixed と併用するとChromiumで描画が崩れるため使わない。
+     ▼濃さの調整はこの opacity の数値だけを触ってください（0.10=極薄 / 0.30=はっきり） */
+  opacity:.17;
+}
+.demo-badge{display:none}
+body.is-sample .watermark,
+body.is-sample .demo-badge{display:block}
+
+.watermark{
+  position:fixed; inset:0; z-index:190;
+  pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27 width%3D%27360%27 height%3D%27280%27%3E%3Ctext x%3D%27110%27 y%3D%2780%27 font-family%3D%27Helvetica%2CArial%2Csans-serif%27 font-size%3D%2727%27 font-weight%3D%27700%27 letter-spacing%3D%275%27 text-anchor%3D%27middle%27 transform%3D%27rotate(-28 110 80)%27 stroke%3D%27%23ffffff%27 stroke-width%3D%273%27 stroke-opacity%3D%270.5%27 fill%3D%27%232f2f2f%27 paint-order%3D%27stroke%27%3ESAMPLE%3C%2Ftext%3E%3Ctext x%3D%27250%27 y%3D%27205%27 font-family%3D%27Helvetica%2CArial%2Csans-serif%27 font-size%3D%2723%27 font-weight%3D%27700%27 letter-spacing%3D%273%27 text-anchor%3D%27middle%27 transform%3D%27rotate(-28 250 205)%27 stroke%3D%27%23ffffff%27 stroke-width%3D%273%27 stroke-opacity%3D%270.5%27 fill%3D%27%232f2f2f%27 paint-order%3D%27stroke%27%3ETAFdesign%3C%2Ftext%3E%3C%2Fsvg%3E");
+  background-repeat:repeat;
+  background-size:300px 233px;
+  /* 濃いグレー＋白フチ。白カード上でも濃紫背景上でも同じように見える。
+     mix-blend-mode は position:fixed と併用するとChromiumで描画が崩れるため使わない。
+     ▼濃さの調整はこの opacity の数値だけを触ってください（0.10=極薄 / 0.30=はっきり） */
+  opacity:.17;
+}
+.cta{
+  display:block;width:min(480px,100%);margin:0 auto;
+  text-decoration:none;text-align:center;
+  background:linear-gradient(135deg,#D9B25A 0%,#B98C34 55%,#D9B25A 100%);
+  color:#2A1D05;
+  border-radius:999px;
+  padding:19px 22px 17px;
+  font-weight:900;font-size:clamp(15px,3.9vw,18px);
+  letter-spacing:.02em;line-height:1.5;
+  box-shadow:0 14px 30px -12px rgba(160,120,30,.7),inset 0 1px 0 rgba(255,255,255,.55);
+  border:none;cursor:pointer;
+  position:relative;overflow:hidden;
+  transition:transform .25s ease,box-shadow .25s ease;
+}
+.cta:hover{transform:translateY(-2px)}
+.cta .sm{display:block;font-size:12px;font-weight:700;letter-spacing:.14em;margin-bottom:2px;opacity:.85}
+.cta-note{text-align:center;font-size:12.5px;color:#8a7f96;margin-top:12px}
+.wrap{width:min(560px,calc(100% - 32px));margin-inline:auto}
+.hero{background:linear-gradient(170deg,#190F32 0%,#2E2148 45%,#413060 75%,#6A4A93 100%);color:#fff;text-align:center;padding:64px 0 44px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:auto 0 0 0;height:60px;background:linear-gradient(transparent,rgba(253,251,247,.12))}
+.hero .eyebrow{font-family:'Cormorant Garamond',serif;font-style:italic;letter-spacing:.3em;color:var(--gold-lt);font-size:14px;margin-bottom:10px}
+.hero h1{font-family:var(--serif);font-weight:900;font-size:clamp(23px,6.4vw,32px);line-height:1.7;letter-spacing:.04em}
+.hero p.sub{margin-top:14px;font-size:14.5px;color:rgba(255,255,255,.82)}
+.pad{padding:52px 0 56px}
+h2.h{font-family:var(--serif);font-weight:900;font-size:clamp(20px,5.4vw,25px);color:var(--ink);text-align:center;line-height:1.7;margin-bottom:8px}
+.rule{width:54px;height:3px;margin:14px auto 26px;background:linear-gradient(90deg,var(--gold),var(--pink))}
+.card{background:#fff;border-radius:16px;padding:26px 22px;box-shadow:0 16px 40px -22px rgba(60,35,90,.35);margin-bottom:18px}
+.step-num{display:inline-block;width:30px;height:30px;border-radius:50%;background:var(--violet);color:#fff;font-weight:900;text-align:center;line-height:30px;font-size:15px;margin-right:10px;font-family:var(--sans)}
+footer{background:var(--ink);color:rgba(255,255,255,.6);text-align:center;padding:34px 16px 40px;font-size:12.5px}
+footer a{color:rgba(255,255,255,.75);margin:0 10px;text-decoration:none}
+mark{background:linear-gradient(transparent 62%,var(--pink-lt) 62%);color:inherit;font-weight:700}
+.note-strip{background:var(--pink-lt);border-radius:12px;padding:14px 18px;font-size:13.5px;line-height:1.9}
+
+.benefit li{list-style:none;padding:12px 4px 12px 38px;position:relative;border-bottom:1px dashed #E5D9EC;font-size:15px}
+.benefit li::before{content:"◆";position:absolute;left:8px;color:var(--gold);font-size:13px}
+.price-box{background:linear-gradient(150deg,#241748,#413060);border-radius:20px;color:#fff;text-align:center;padding:36px 24px;box-shadow:0 22px 50px -22px rgba(30,15,60,.7)}
+.price-box .label{font-size:13px;letter-spacing:.2em;color:var(--gold-lt);margin-bottom:8px}
+.price-box .price{font-family:var(--serif);font-weight:900;font-size:clamp(34px,9vw,44px);line-height:1.3}
+.price-box .price small{font-size:.45em;font-weight:700}
+.price-box .en{font-size:12.5px;color:rgba(255,255,255,.6);margin-top:6px}
+.flow-card{display:flex;gap:14px;align-items:flex-start}
+.flow-card .step-num{flex:none;margin-top:6px}
+.kv{background:linear-gradient(170deg,#190F32 0%,#2E2148 50%,#6A4A93 100%)}
+.kv .catch-sm{font-size:13.5px;letter-spacing:.14em;color:var(--pink-lt);margin-bottom:14px}
+</style>
+</head>
+<body class="is-sample">
+<div class="watermark" aria-hidden="true"></div>
+<div class="demo-badge">SAMPLE 完成形デモ / Teach &amp; Funnel Design　※無断使用禁止</div>
+
+<section class="hero kv">
+  <div class="wrap">
+    <p class="eyebrow">Personal Session</p>
+    <p class="catch-sm">― 動画をご覧くださった方だけへのご案内 ―</p>
+    <h1>あなたの魂の設計図を、<br>1対1で読み解く</h1>
+    <p class="sub">魂の設計図 パーソナルセッション（全3回・仮）</p>
+  </div>
+</section>
+
+<section class="pad">
+  <div class="wrap">
+    <h2 class="h">このセッションで<br>受け取っていただくもの</h2>
+    <div class="rule"></div>
+    <div class="card">
+      <ul class="benefit">
+        <li>生まれた瞬間の星から読み解く、<mark>あなた専用の設計図シート</mark>（仮）</li>
+        <li>才能・使命・つまずきの傾向の、1対1での読み解き（仮）</li>
+        <li>これから12ヶ月の「動くべきタイミング」の見取り図（仮）</li>
+        <li>セッション後30日間の、メッセージでのご質問サポート（仮）</li>
+      </ul>
+    </div>
+    <p class="note-strip">※ このページの内容・回数・特典はすべて<b>仮の構成</b>です。実際の商品内容が確定し次第、差し替えます。</p>
+  </div>
+</section>
+
+<section class="pad" style="padding-top:6px">
+  <div class="wrap">
+    <h2 class="h">ご料金</h2>
+    <div class="rule"></div>
+    <div class="price-box">
+      <p class="label">PERSONAL SESSION（仮）</p>
+      <p class="price">100,000<small>円（税込・仮）</small></p>
+      <p class="en">全3回・オンライン／お支払い方法は確定後に記載</p>
+    </div>
+  </div>
+</section>
+
+<section class="pad" style="padding-top:6px">
+  <div class="wrap">
+    <h2 class="h">お申込みからの流れ</h2>
+    <div class="rule"></div>
+    <div class="card flow-card"><span class="step-num">1</span><p><b>下のボタンからお申込み</b><br>フォームからご希望の日程をお知らせください。</p></div>
+    <div class="card flow-card"><span class="step-num">2</span><p><b>日程のご案内とお支払い</b><br>確定メールとお支払いのご案内をお送りします。</p></div>
+    <div class="card flow-card"><span class="step-num">3</span><p><b>セッション開始</b><br>オンラインで、あなたの設計図を一緒に読み解きます。</p></div>
+
+    <div style="margin-top:34px">
+      <!-- ▼ 申込フォームURLに差し替え（検索: #APPLY_URL） -->
+      <a class="cta" href="#APPLY_URL"><span class="sm">＼ 日程のご相談だけでも大丈夫です ／</span>セッションに申し込む</a>
+      <p class="cta-note">※ 定員・募集期間などの条件は、内容確定後に記載します</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div><a href="#">運営者情報</a><a href="#">プライバシーポリシー</a><a href="#">特定商取引法に基づく表記</a></div>
+  <p style="margin-top:10px">Copyright © AKI MAKARA. All rights reserved.</p>
+</footer>
+</body>
+</html>

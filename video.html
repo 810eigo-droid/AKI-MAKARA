@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>動画セミナー視聴ページ｜しあわせ超開運メソッド</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Noto+Sans+JP:wght@400;500;700;900&family=Cormorant+Garamond:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1B1233; --ink-2:#2E2148; --ink-3:#413060;
+  --text:#2C2438; --gold:#C0983F; --gold-lt:#E4CE94;
+  --pink:#E39BC2; --pink-lt:#F7DCEB; --violet:#8B6BC7;
+  --serif:'Noto Serif JP',serif; --sans:'Noto Sans JP',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+img{max-width:100%;height:auto;display:block}
+body{font-family:var(--sans);color:var(--text);background:#FDFBF7;line-height:2;font-size:15.5px;-webkit-font-smoothing:antialiased}
+.watermark,.demo-badge{display:none}
+body.is-sample .watermark{display:block}
+body.is-sample .demo-badge{display:block}
+.watermark{
+  position:fixed; inset:0; z-index:190;
+  pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27 width%3D%27360%27 height%3D%27280%27%3E%3Ctext x%3D%27110%27 y%3D%2780%27 font-family%3D%27Helvetica%2CArial%2Csans-serif%27 font-size%3D%2727%27 font-weight%3D%27700%27 letter-spacing%3D%275%27 text-anchor%3D%27middle%27 transform%3D%27rotate(-28 110 80)%27 stroke%3D%27%23ffffff%27 stroke-width%3D%273%27 stroke-opacity%3D%270.5%27 fill%3D%27%232f2f2f%27 paint-order%3D%27stroke%27%3ESAMPLE%3C%2Ftext%3E%3Ctext x%3D%27250%27 y%3D%27205%27 font-family%3D%27Helvetica%2CArial%2Csans-serif%27 font-size%3D%2723%27 font-weight%3D%27700%27 letter-spacing%3D%273%27 text-anchor%3D%27middle%27 transform%3D%27rotate(-28 250 205)%27 stroke%3D%27%23ffffff%27 stroke-width%3D%273%27 stroke-opacity%3D%270.5%27 fill%3D%27%232f2f2f%27 paint-order%3D%27stroke%27%3ETAFdesign%3C%2Ftext%3E%3C%2Fsvg%3E");
+  background-repeat:repeat;
+  background-size:300px 233px;
+  /* 濃いグレー＋白フチ。白カード上でも濃紫背景上でも同じように見える。
+     mix-blend-mode は position:fixed と併用するとChromiumで描画が崩れるため使わない。
+     ▼濃さの調整はこの opacity の数値だけを触ってください（0.10=極薄 / 0.30=はっきり） */
+  opacity:.17;
+}
+.demo-badge{display:none}
+body.is-sample .watermark,
+body.is-sample .demo-badge{display:block}
+
+.watermark{
+  position:fixed; inset:0; z-index:190;
+  pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27 width%3D%27360%27 height%3D%27280%27%3E%3Ctext x%3D%27110%27 y%3D%2780%27 font-family%3D%27Helvetica%2CArial%2Csans-serif%27 font-size%3D%2727%27 font-weight%3D%27700%27 letter-spacing%3D%275%27 text-anchor%3D%27middle%27 transform%3D%27rotate(-28 110 80)%27 stroke%3D%27%23ffffff%27 stroke-width%3D%273%27 stroke-opacity%3D%270.5%27 fill%3D%27%232f2f2f%27 paint-order%3D%27stroke%27%3ESAMPLE%3C%2Ftext%3E%3Ctext x%3D%27250%27 y%3D%27205%27 font-family%3D%27Helvetica%2CArial%2Csans-serif%27 font-size%3D%2723%27 font-weight%3D%27700%27 letter-spacing%3D%273%27 text-anchor%3D%27middle%27 transform%3D%27rotate(-28 250 205)%27 stroke%3D%27%23ffffff%27 stroke-width%3D%273%27 stroke-opacity%3D%270.5%27 fill%3D%27%232f2f2f%27 paint-order%3D%27stroke%27%3ETAFdesign%3C%2Ftext%3E%3C%2Fsvg%3E");
+  background-repeat:repeat;
+  background-size:300px 233px;
+  /* 濃いグレー＋白フチ。白カード上でも濃紫背景上でも同じように見える。
+     mix-blend-mode は position:fixed と併用するとChromiumで描画が崩れるため使わない。
+     ▼濃さの調整はこの opacity の数値だけを触ってください（0.10=極薄 / 0.30=はっきり） */
+  opacity:.17;
+}
+.cta{
+  display:block;width:min(480px,100%);margin:0 auto;
+  text-decoration:none;text-align:center;
+  background:linear-gradient(135deg,#D9B25A 0%,#B98C34 55%,#D9B25A 100%);
+  color:#2A1D05;
+  border-radius:999px;
+  padding:19px 22px 17px;
+  font-weight:900;font-size:clamp(15px,3.9vw,18px);
+  letter-spacing:.02em;line-height:1.5;
+  box-shadow:0 14px 30px -12px rgba(160,120,30,.7),inset 0 1px 0 rgba(255,255,255,.55);
+  border:none;cursor:pointer;
+  position:relative;overflow:hidden;
+  transition:transform .25s ease,box-shadow .25s ease;
+}
+.cta:hover{transform:translateY(-2px)}
+.cta .sm{display:block;font-size:12px;font-weight:700;letter-spacing:.14em;margin-bottom:2px;opacity:.85}
+.cta-note{text-align:center;font-size:12.5px;color:#8a7f96;margin-top:12px}
+.wrap{width:min(560px,calc(100% - 32px));margin-inline:auto}
+.hero{background:linear-gradient(170deg,#190F32 0%,#2E2148 45%,#413060 75%,#6A4A93 100%);color:#fff;text-align:center;padding:64px 0 44px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:auto 0 0 0;height:60px;background:linear-gradient(transparent,rgba(253,251,247,.12))}
+.hero .eyebrow{font-family:'Cormorant Garamond',serif;font-style:italic;letter-spacing:.3em;color:var(--gold-lt);font-size:14px;margin-bottom:10px}
+.hero h1{font-family:var(--serif);font-weight:900;font-size:clamp(23px,6.4vw,32px);line-height:1.7;letter-spacing:.04em}
+.hero p.sub{margin-top:14px;font-size:14.5px;color:rgba(255,255,255,.82)}
+.pad{padding:52px 0 56px}
+h2.h{font-family:var(--serif);font-weight:900;font-size:clamp(20px,5.4vw,25px);color:var(--ink);text-align:center;line-height:1.7;margin-bottom:8px}
+.rule{width:54px;height:3px;margin:14px auto 26px;background:linear-gradient(90deg,var(--gold),var(--pink))}
+.card{background:#fff;border-radius:16px;padding:26px 22px;box-shadow:0 16px 40px -22px rgba(60,35,90,.35);margin-bottom:18px}
+.step-num{display:inline-block;width:30px;height:30px;border-radius:50%;background:var(--violet);color:#fff;font-weight:900;text-align:center;line-height:30px;font-size:15px;margin-right:10px;font-family:var(--sans)}
+footer{background:var(--ink);color:rgba(255,255,255,.6);text-align:center;padding:34px 16px 40px;font-size:12.5px}
+footer a{color:rgba(255,255,255,.75);margin:0 10px;text-decoration:none}
+mark{background:linear-gradient(transparent 62%,var(--pink-lt) 62%);color:inherit;font-weight:700}
+.note-strip{background:var(--pink-lt);border-radius:12px;padding:14px 18px;font-size:13.5px;line-height:1.9}
+
+.vwrap{width:min(680px,calc(100% - 32px));margin-inline:auto}
+.vframe{position:relative;aspect-ratio:16/9;border-radius:14px;overflow:hidden;background:linear-gradient(150deg,#241748,#413060);display:flex;align-items:center;justify-content:center;flex-direction:column;color:#fff;box-shadow:0 18px 44px -20px rgba(40,20,80,.6)}
+.vframe .play{width:64px;height:64px;border-radius:50%;background:rgba(255,255,255,.16);display:flex;align-items:center;justify-content:center;margin-bottom:12px;border:2px solid rgba(255,255,255,.5)}
+.vframe .play::after{content:"";border-style:solid;border-width:12px 0 12px 20px;border-color:transparent transparent transparent #fff;margin-left:5px}
+.vframe p{font-size:13px;color:rgba(255,255,255,.75)}
+.vh{font-family:var(--serif);font-weight:900;font-size:clamp(18px,5vw,22px);color:var(--ink);line-height:1.7;margin:34px 0 6px}
+.vh .no{color:var(--violet);font-size:.85em;display:block;letter-spacing:.1em}
+.vlead{font-size:14.5px;margin-bottom:16px}
+.next-box{background:linear-gradient(150deg,#241748,#413060);border-radius:18px;color:#fff;padding:32px 24px;text-align:center;margin-top:44px}
+.next-box h3{font-family:var(--serif);font-weight:900;font-size:clamp(18px,5vw,22px);line-height:1.8;margin-bottom:10px}
+.next-box p{font-size:14px;color:rgba(255,255,255,.85);margin-bottom:18px}
+</style>
+</head>
+<body class="is-sample">
+<div class="watermark" aria-hidden="true"></div>
+<div class="demo-badge">SAMPLE 完成形デモ / Teach &amp; Funnel Design　※無断使用禁止</div>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Movie</p>
+    <h1>しあわせ超開運メソッド<br>動画セミナー 視聴ページ</h1>
+    <p class="sub">各回15分・スマホでご覧いただけます／配信期限はありません</p>
+  </div>
+</section>
+
+<section class="pad">
+  <div class="vwrap">
+
+    <h2 class="vh"><span class="no">第1回</span>魂の設計図とは何か — 星に刻まれた、あなただけの情報</h2>
+    <p class="vlead">まずは「設計図」の正体から。なぜ生年月日と時間で、その人だけの情報が分かるのかをお話しします。</p>
+    <!-- ▼ 第1回：YouTube限定公開の埋め込みに差し替え（検索: VIDEO_1） -->
+    <div class="vframe" id="VIDEO_1"><span class="play"></span><p>ここに第1回の動画が入ります（YouTube限定公開）</p></div>
+
+    <h2 class="vh"><span class="no">第2回</span>設計図の読み解き方 — 才能・使命・飛躍のタイミング</h2>
+    <p class="vlead">ご自身の設計図から「向いている努力」と「動くべき時期」をどう見つけるか、実例とともに。</p>
+    <!-- ▼ 第2回（検索: VIDEO_2） -->
+    <div class="vframe" id="VIDEO_2"><span class="play"></span><p>ここに第2回の動画が入ります（YouTube限定公開）</p></div>
+
+    <h2 class="vh"><span class="no">第3回</span>しあわせ超開運メソッド — 理想の未来へ動き出す手順</h2>
+    <p class="vlead">知るだけで終わらせない。読み解いた設計図を、今日からの行動に変える具体的な手順です。</p>
+    <!-- ▼ 第3回（検索: VIDEO_3） -->
+    <div class="vframe" id="VIDEO_3"><span class="play"></span><p>ここに第3回の動画が入ります（YouTube限定公開）</p></div>
+
+    <div class="next-box">
+      <h3>3本すべてご覧になったあなたへ<br>特別なご案内があります</h3>
+      <p>ご自身の設計図を、真果楽アキが直接読み解く<br>個別セッションのご案内です。</p>
+      <a class="cta" href="offer.html">ご案内を見る</a>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div><a href="#">運営者情報</a><a href="#">プライバシーポリシー</a><a href="#">特定商取引法に基づく表記</a></div>
+  <p style="margin-top:10px">Copyright © AKI MAKARA. All rights reserved.</p>
+</footer>
+</body>
+</html>

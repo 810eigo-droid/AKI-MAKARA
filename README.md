@@ -9,6 +9,18 @@
 **公開URL** ： https://810eigo-droid.github.io/AKI-MAKARA/
 **改善版v2** ： https://810eigo-droid.github.io/AKI-MAKARA/index-v2.html （文章強化版。変更内容は [COPY-V2.md](COPY-V2.md)）
 
+## ファネル一式（完成形デモ・2026-09-22）
+
+| ページ | ファイル | プレビュー | 差し替えプレースホルダ |
+|---|---|---|---|
+| リスト取りLP | `index-v2.html` | [表示](https://810eigo-droid.github.io/AKI-MAKARA/index-v2.html) | `href="#entry"` → マイスピー登録フォームURL |
+| 登録完了（サンクス） | `thanks.html` | [表示](https://810eigo-droid.github.io/AKI-MAKARA/thanks.html) | `#LINE_URL` → LINE友だち追加URL |
+| 動画視聴 | `video.html` | [表示](https://810eigo-droid.github.io/AKI-MAKARA/video.html) | `VIDEO_1〜3` → YouTube限定公開の埋め込み |
+| バックエンド販売LP（仮） | `offer.html` | [表示](https://810eigo-droid.github.io/AKI-MAKARA/offer.html) | `#APPLY_URL` → 申込フォーム。**内容は全て仮** |
+
+導線：LP →（マイスピー登録）→ thanks → メール3通で video → 第3回の下から offer → 申込。
+メール／LINE配信はマイスピー側で設定（原稿草稿は taf-private 側にあり）。
+
 ---
 
 # 📷 画像ファイル一覧
