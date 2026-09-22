@@ -17,6 +17,8 @@
 | 登録完了（サンクス） | `thanks.html` | [表示](https://810eigo-droid.github.io/AKI-MAKARA/thanks.html) | `#LINE_URL` → LINE友だち追加URL |
 | 動画視聴 | `video.html` | [表示](https://810eigo-droid.github.io/AKI-MAKARA/video.html) | `VIDEO_1〜3` → YouTube限定公開の埋め込み |
 | バックエンド販売LP（仮） | `offer.html` | [表示](https://810eigo-droid.github.io/AKI-MAKARA/offer.html) | `#APPLY_URL` → 申込フォーム。**内容は全て仮** |
+| 特典1 魂の傾向シート（仮） | `tokuten1.html` | [表示](https://810eigo-droid.github.io/AKI-MAKARA/tokuten1.html) | 中身は監修待ち。印刷/PDF保存ボタン付き |
+| 特典2 ロードマップ（仮） | `tokuten2.html` | [表示](https://810eigo-droid.github.io/AKI-MAKARA/tokuten2.html) | 同上 |
 
 導線：LP →（マイスピー登録）→ thanks → メール3通で video → 第3回の下から offer → 申込。
 メール／LINE配信はマイスピー側で設定（原稿草稿は taf-private 側にあり）。
